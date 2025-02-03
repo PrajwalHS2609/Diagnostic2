@@ -1,0 +1,54 @@
+.homeKey-container {
+  /* border: solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.homeKey-content {
+  /* border: solid green; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  padding: 30px;
+  background-color: var(--customColor2);
+  border-radius: 20px;
+}
+.homeKey-item {
+  /* border: solid red; */
+  border-right: solid 1px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  width: 300px;
+}
+.homeKey-item:nth-child(4) {
+  border: none;
+}
+.homeKey-item > h2 {
+  color: white;
+  font-size: 50px;
+}
+.homeKey-item > p {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.keyPoint-icon {
+  color: white;
+  font-size: 50px;
+  background-color: white;
+  color: var(--customColor1);
+  padding: 10px;
+  border-radius: 100%;
+  transition: 300ms ease-in-out;
+}
+.homeKey-item:hover .keyPoint-icon {
+  color: white;
+  background-color: var(--customColor1);
+}

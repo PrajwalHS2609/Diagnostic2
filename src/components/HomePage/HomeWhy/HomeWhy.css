@@ -1,0 +1,80 @@
+.homeWhyMain-container {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://medilo-html.netlify.app/assets/img/service_bg_2.jpg");
+  background-size: cover;
+}
+.homeWhyMain-content {
+  /* border: solid green; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.homeWhyHead-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 50px;
+}
+.homeWhyMain-content:nth-child(1) {
+  width: 60%;
+}
+.homeWhyMain-content:nth-child(2) {
+  width: 40%;
+}
+.homeWhyCard-container {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.homeWhyCard-item {
+  /* border: solid blue; */
+  border-bottom: solid 1px grey;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.homeWhyCard-item:nth-child(odd) {
+  border-right: solid 1px grey;
+}
+.homeWhyCard-item:nth-child(5) {
+  border-bottom: none;
+}
+.homeWhyCard-item:nth-child(6) {
+  border-bottom: none;
+}
+.homeWhyCard-itemContent:nth-child(1) {
+  width: 30%;
+}
+.homeWhyCard-itemContent:nth-child(2) {
+  width: 70%;
+}
+.homeWhyCard-itemContent > h3 {
+  font-size: 20px;
+  color: var(--customColor1);
+
+}
+.homeWhyCard-itemContent > p {
+  font-size: 15px;
+  text-align: justify;
+}
+.homeWhyCard-icon {
+  font-size: 50px;
+  color: var(--customColor2);
+}
