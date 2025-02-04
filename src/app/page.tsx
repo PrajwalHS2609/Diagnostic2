@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div className="page-container">
       <HomeHeader />
+      <HomeServices />
       <HomeAboutUs />
       <HomeKey />
-      <HomeServices />
-      <HomeDoctor/>
+      <HomeDoctor />
       <HomeWhy />
     </div>
   );

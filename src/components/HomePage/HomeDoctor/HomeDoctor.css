@@ -22,6 +22,7 @@
 }
 .homeDoctorHead-container > h2 {
   font-weight: 600;
+  text-align: center;
 }
 .homeDoctorCard-container {
   /* border: solid green; */
