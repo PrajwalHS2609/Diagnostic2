@@ -5,6 +5,7 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import HomeServices from "@/components/HomePage/HomeServices/HomeServices";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
+import HomeSubServices from "@/components/HomePage/HomeSubServices/HomeSubServices";
 export default function Home() {
   return (
     <div className="page-container">
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeServices />
       <HomeAboutUs />
       <HomeKey />
+      <HomeSubServices />
       <HomeDoctor />
       <HomeWhy />
     </div>
