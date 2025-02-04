@@ -178,7 +178,7 @@
   height: 80px;
 }
 .innerResp-MenuHeadIco {
-  color: white;
+  color: var(--customColor2);
   font-size: 40px;
   background-color: var(--customColor);
   border-radius: 100%;

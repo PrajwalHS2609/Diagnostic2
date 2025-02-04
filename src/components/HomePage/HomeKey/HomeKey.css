@@ -52,3 +52,21 @@
   color: white;
   background-color: var(--customColor1);
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .homeKey-content {
+    /* border: solid green; */
+    flex-direction: column;
+  }
+  .homeKey-item {
+    /* border: solid red; */
+    border-right: none;
+    border-bottom: solid 1px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    width: 300px;
+  }
+}

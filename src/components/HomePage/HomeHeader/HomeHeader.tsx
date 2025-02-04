@@ -4,14 +4,13 @@ import Carousel from "react-bootstrap/Carousel";
 import "./HomeHeader.css";
 import Link from "next/link";
 import Image from "next/image";
-import headerHomebanner1 from "@/Images/homeHeader/homeHeaderBanner1.png";
 import headerHomebanner2 from "@/Images/homeHeader/homeHeaderBanner2.png";
 
 const HomeHeader = () => {
   const headerContent = [
     {
       id: 1,
-      img:headerHomebanner1,
+      img:headerHomebanner2,
       head: "Clear Insights, Better Care: ",
       highlight: "Ultrasound Scan",
       para: "Experience precise and reliable imaging with our advanced ultrasound scan services for accurate diagnostics.",

@@ -18,6 +18,10 @@
   gap: 20px;
   padding: 20px;
 }
+.homeWhyHead-container > h6 {
+  color: var(--customColor1);
+  font-weight: bold;
+}
 .homeWhyHead-container {
   display: flex;
   justify-content: flex-start;
@@ -68,7 +72,6 @@
 .homeWhyCard-itemContent > h3 {
   font-size: 20px;
   color: var(--customColor1);
-
 }
 .homeWhyCard-itemContent > p {
   font-size: 15px;
@@ -77,4 +80,50 @@
 .homeWhyCard-icon {
   font-size: 50px;
   color: var(--customColor2);
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .homeWhyHead-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeWhyHead-container > h2 {
+    text-align: center;
+  }
+  .homeWhyMain-content:nth-child(1) {
+    width: 100%;
+  }
+  .homeWhyMain-content:nth-child(2) {
+    display: none;
+  }
+
+  .homeWhyCard-item {
+    /* border: solid blue; */
+    width: 50%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .homeWhyCard-itemContent:nth-child(1) {
+    width: 100%;
+  }
+  .homeWhyCard-itemContent:nth-child(2) {
+    width: 100%;
+  }
+  .homeWhyCard-itemContent > h3 {
+    font-size: 18px;
+    color: var(--customColor1);
+    text-align: center;
+  }
+  .homeWhyCard-itemContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
 }

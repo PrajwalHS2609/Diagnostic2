@@ -134,3 +134,21 @@
 .homeServicesCard-content:hover .homeServicesCard-design {
   background-color: white;
 }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .homeServicesHead-container {
+    /* border: solid green; */
+    flex-direction: column;
+  }
+  .homeServicesHead-content {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .homeServicesHead-content > h2 {
+    font-weight: 600;
+    text-align: center;
+  }
+}
