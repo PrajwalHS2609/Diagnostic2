@@ -9,6 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { FaEnvelopeOpenText } from "react-icons/fa";
 
 const FooterAddress = () => {
   const socialIcon = [
@@ -37,6 +38,10 @@ const FooterAddress = () => {
       <div className="footerAddress-content">
         <FaPhoneAlt className="footerAddress-ico" />
         <a href="tel:9876543210">+91 9876543210</a>
+      </div>
+      <div className="footerAddress-content">
+        <FaEnvelopeOpenText className="footerAddress-ico" />
+        <a href="mailto:info@xyz.com">info@xyz.com</a>
       </div>
       <div className="footerAddress-socialContainer">
         {socialIcon.map((x) => (

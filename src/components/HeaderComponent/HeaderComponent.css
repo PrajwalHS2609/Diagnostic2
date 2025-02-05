@@ -1,0 +1,117 @@
+.headerComponent-container {
+  /* border: solid red; */
+  height: 500px;
+  width: 100%;
+  background: linear-gradient(to right, #2ea6f7, #2ea6f7, #002261);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.headerComponent-imgContainer {
+  width: 50%;
+  height: 100%;
+}
+.headerComponent-imgContainer > img {
+  /* border: solid blue !important; */
+  object-fit: cover !important;
+  width: 100%;
+  height: 100%;display: none;
+}
+.headerComponent-cover {
+  /* border: solid teal; */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px;
+}
+.headerComponent-cover > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.headerComponent-cover > span > h5 > a {
+  color: var(--customColor3);
+  text-decoration: none;
+}
+.headerComponent-coverContent {
+  width: 100%;
+}
+.headerComponent-coverContent > h2 {
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+}
+.headerComponent-coverContent > h2 > span {
+  color: var(--customColor2);
+}
+.headerComponent-coverContent > p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--customColor2);
+}
+.headerComponent-coverContent > span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.headerComponent-coverContent > span > a {
+  color: var(--customColor2);
+}
+.headerComponent-coverContent > span > a > button {
+  font-weight: 500;
+}
+.headerComponent-btn1 {
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  border: solid white;
+}
+.headerComponent-btn2 {
+  border: solid var(--customColor2);
+  padding: 10px;
+  border-radius: 30px;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .headerComponent-container {
+        /* border: solid red; */
+        height: 100%;
+        flex-direction: column-reverse;
+      }
+      .headerComponent-imgContainer {
+        width: 100%;
+        height: 100%;
+      }
+      .headerComponent-cover {
+        /* border: solid teal; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 50px;
+      }
+      .headerComponent-coverContent > h2 {
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+      }
+      .headerComponent-imgContainer > img {
+        /* border: solid blue !important; */
+        object-fit: cover !important;
+        width: 100%;
+        height: 100%;
+      }
+}
+
