@@ -1,7 +1,6 @@
-
 import Logo from "./Logo";
 import Menu from "./Menu";
-import "./NavBar.css";
+import "./Navbar.css";
 export default function Navbar() {
   return(
     <nav className="navbar-container">
