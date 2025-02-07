@@ -2,6 +2,7 @@ import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
+import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import ultraSound1 from "@/Images/ultrasound/ultrasound1.png";
 import ultraSound2 from "@/Images/ultrasound/ultrasound2.png";
@@ -22,6 +23,8 @@ export default function Radiological() {
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
+      <HomeTestimonial/>
+
       <HomeWhy />
     </div>
   );

@@ -2,6 +2,7 @@ import AboutUsHeader from "@/components/AboutUs/AboutUsHeader";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
+import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 
 export default function AboutUs() {
@@ -11,6 +12,7 @@ export default function AboutUs() {
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
+      <HomeTestimonial/>
       <HomeWhy />
     </div>
   );
