@@ -131,7 +131,7 @@ export default function Menu() {
           <div className="menuDrop-container">
             <ul>
               <li>
-                <Link href="/pathology">Pathology</Link>
+                <Link href="/pathology-test">Pathology</Link>
               </li>
               <li>
                 <Link href="/ultrasound-scan">UltraSound</Link>
@@ -157,6 +157,10 @@ export default function Menu() {
                     </li>
                   </ul>
                 </div>
+              </li>
+              <li>
+                <Link href="/radiological-services">Radiological Procedures</Link>
+                {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
               </li>
             </ul>
           </div>

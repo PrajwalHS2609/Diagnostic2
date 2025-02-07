@@ -92,12 +92,12 @@
 }
 
 .menu-content1 > li > a:hover {
-  color: grey;
+  color: var(--customColor2);
 }
 
 .menu-content1 > li > a::after {
   content: "";
-  border: solid 1px gray;
+  border: solid 1px var(--customColor2);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -172,12 +172,12 @@
 }
 
 .menuDrop-container > ul > li > a:hover {
-  color: grey;
+  color: var(--customColor2);
 }
 
 .menuDrop-container > ul > li > a::after {
   content: "";
-  border: solid 1px gray;
+  border: solid 1px var(--customColor2);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -258,11 +258,11 @@
 }
 
 .subMenu-drop > ul > li > a:hover {
-  color: grey;
+  color: var(--customColor2);
 }
 .subMenu-drop > ul > li > a::after {
   content: "";
-  border: solid 1px gray;
+  border: solid 1px var(--customColor2);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -513,7 +513,7 @@
 .menuContainerBtn > a > button::after {
   content: "";
   position: absolute;
-  background-color: var(--customColor);
+  background-color: var(--customColor2);
   height: 100%;
   width: 0;
   left: 0px;
@@ -568,12 +568,14 @@
   margin-left: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
+
   .menu-container {
     /* border: solid; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
+    width: 100%;
   }
 
   .menu-content1 {
@@ -587,7 +589,7 @@
 
   .logo-container {
     /* border: solid; */
-    width: 400px;
+    width: 100px;
     height: 60px;
     overflow: hidden;
   }
