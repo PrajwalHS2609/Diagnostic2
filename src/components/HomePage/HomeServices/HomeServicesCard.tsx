@@ -87,7 +87,7 @@ const HomeServicesCard = () => {
           </span>
           <div className="homeServicesCard-textContainer">
             <h4>
-              <Link href={"/"}>{x.title}</Link>{" "}
+              <Link href={x.link}>{x.title}</Link>{" "}
             </h4>
             <p>{x.description}</p>
           </div>
