@@ -1,12 +1,14 @@
-import Logo from "./Logo";
-import Menu from "./Menu";
-import "./NavBar.css";
-
-export default function NavBar() {
+import React from 'react'
+import Logo from './Logo'
+import Menu from './Menu'
+import "./NavBar.css"
+const NavBar = () => {
   return (
     <nav className="navbar-container">
       <Logo />
       <Menu />
     </nav>
-  );
+  )
 }
+
+export default NavBar
