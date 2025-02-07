@@ -1,11 +1,11 @@
 import React from 'react'
 import Logo from './Logo'
 // import Menu from './Menu'
-import "./NavBar.css"
+// import "./NavBar.css"
 const NavBar = () => {
   return (
     <nav className="navbar-container">
-      <Logo />
+      {/* <Logo /> */}
       {/* <Menu /> */}
     </nav>
   )
