@@ -11,12 +11,16 @@
 .headerComponent-imgContainer {
   width: 50%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .headerComponent-imgContainer > img {
   /* border: solid blue !important; */
   object-fit: cover !important;
   width: 100%;
-  height: 100%;display: none;
+  height: 100%;
+  display: none;
 }
 .headerComponent-cover {
   /* border: solid teal; */
@@ -82,36 +86,47 @@
   width: 100%;
   height: 100%;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
-    .headerComponent-container {
-        /* border: solid red; */
-        height: 100%;
-        flex-direction: column-reverse;
-      }
-      .headerComponent-imgContainer {
-        width: 100%;
-        height: 100%;
-      }
-      .headerComponent-cover {
-        /* border: solid teal; */
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 50px;
-      }
-      .headerComponent-coverContent > h2 {
-        font-size: 50px;
-        color: white;
-        font-weight: bold;
-      }
-      .headerComponent-imgContainer > img {
-        /* border: solid blue !important; */
-        object-fit: cover !important;
-        width: 100%;
-        height: 100%;
-      }
+.mySwiper {
+  /* border: solid red; */
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
 }
-
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .headerComponent-container {
+    /* border: solid red; */
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+  .headerComponent-imgContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .headerComponent-cover {
+    /* border: solid teal; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+  }
+  .headerComponent-coverContent > h2 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+  }
+  .headerComponent-imgContainer > img {
+    /* border: solid blue !important; */
+    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+  }
+  .mySwiper {
+    /* border: solid red; */
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+}

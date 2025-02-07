@@ -6,19 +6,19 @@ const HomeDoctorCard = () => {
     {
       id: 1,
       img: "https://medilo-html.netlify.app/assets/img/team_1.jpg",
-      name: "John Doe",
+      name: "Dr.John Doe",
       designation: "Pathologist",
     },
     {
       id: 2,
       img: "https://medilo-html.netlify.app/assets/img/team_3.jpg",
-      name: "Smith",
+      name: "Dr.Smith",
       designation: "Cardiologist",
     },
     {
       id: 3,
       img: "https://medilo-html.netlify.app/assets/img/team_5.jpg",
-      name: "Daisy",
+      name: "Dr.Daisy",
       designation: "Radiologist",
     },
   ];

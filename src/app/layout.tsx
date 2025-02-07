@@ -1,8 +1,8 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
 import TopBar from "@/components/TopBar/Topbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 export default function RootLayout({
   children,

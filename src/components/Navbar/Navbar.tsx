@@ -1,11 +1,12 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
-import "./Navbar.css";
+import "./NavBar.css";
+
 export default function Navbar() {
-  return(
+  return (
     <nav className="navbar-container">
-    <Logo/>
-    <Menu/>
-  </nav>
-  )
+      <Logo />
+      <Menu />
+    </nav>
+  );
 }

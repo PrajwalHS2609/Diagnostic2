@@ -1,0 +1,95 @@
+.homeHeader-container {
+    /* border: solid red; */
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #2ea6f7, #2ea6f7, #002261);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .homeHeader-container > img {
+    /* border: solid blue; */
+    height: 100%;
+    width: fit-content;
+    object-fit: contain;
+  }
+  .homeHeader-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+  }
+  .homeHeader-coverContent {
+    width: 50%;
+  }
+  .homeHeader-coverContent > h2 {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+  }
+  .homeHeader-coverContent > h2 > span {
+    color: var(--customColor2);
+  }
+  .homeHeader-coverContent > p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--customColor2);
+  }
+  .homeHeader-coverContent > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  .homeHeader-coverContent > span > a {
+    color: var(--customColor2);
+  }
+  .homeHeader-coverContent > span > a > button {
+    font-weight: 500;
+  }
+  .homeheader-btn1 {
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid white;
+  }
+  .homeheader-btn2 {
+    border: solid var(--customColor2);
+    padding: 10px;
+    border-radius: 30px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .homeHeader-container {
+        /* border: solid red; */
+        height: 100%;
+        flex-direction: column;
+      }
+    
+      .homeHeader-cover {
+        width: 100%;
+        height: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .homeHeader-coverContent {
+        width: 100%;
+      }
+      .homeHeader-coverContent > h2 {
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+      }
+}
