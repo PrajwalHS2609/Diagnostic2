@@ -1,14 +1,12 @@
-import React from 'react'
-// import Logo from './Logo'
-// import Menu from './Menu'
-// import "./NavBar.css"
-const NavBar = () => {
-  return (
+
+import Logo from "./Logo";
+import Menu from "./Menu";
+import "./Navbar.css";
+export default function Navbar() {
+  return(
     <nav className="navbar-container">
-      {/* <Logo /> */}
-      {/* <Menu /> */}
-    </nav>
+    <Logo/>
+    <Menu/>
+  </nav>
   )
 }
-
-export default NavBar

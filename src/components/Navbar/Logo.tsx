@@ -1,6 +1,5 @@
 import Image from "next/image";
-import logo from "@/Images/logo.png";
-import "./NavBar.css";
+import logo from "@/Images/logo.png"
 export default function Logo() {
   return (
     <div className="logo-container">

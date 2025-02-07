@@ -1,36 +1,20 @@
-"use client";
+"use client"; // Add this at the top to mark the file as a Client Component
+
+import { usePathname } from "next/navigation"; // Importing usePathname for Client Components
 import Link from "next/link";
-import "./NavBar.css";
 import { MdMenu } from "react-icons/md";
+import { AiOutlinePlus } from "react-icons/ai";
 import { HiMiniXMark } from "react-icons/hi2";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { useRef, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import logo from "@/Images/logo.png";
+import Image from "next/image";
 
-export default function Menu() {
-  const handleAppointment = () => {
-    const bookPopUpElement = document.querySelector(".bookPopUp");
-    if (bookPopUpElement) {
-      (bookPopUpElement as HTMLElement).style.visibility = "visible";
-    } else {
-      console.warn("Element with class 'bookPopUp' not found");
-    }
-  };
+const Menu = () => {
+  const pathname = usePathname();
   const [drop, setDrop] = useState(false);
-
-  const dropRef = useRef<HTMLDivElement | null>(null);
-  const dropRef2 = useRef<HTMLDivElement | null>(null);
-  const subDropRef = useRef<HTMLDivElement | null>(null);
-
-  const showSideBar = () => {
-    const exit = document.querySelector(".exit") as HTMLElement;
-    const sideBar = document.querySelector(".resp-Menu") as HTMLElement;
-    // sideBar.style.height = "fit-content";
-    sideBar.style.visibility = "visible";
-    sideBar.style.opacity = "1";
-    sideBar.style.transform = "translateX(0px)";
-    exit.style.display = "block";
-  };
+  const dropRef = useRef<HTMLDivElement | null>(null); // Explicitly typed ref
+  // const handlePopUp = () => {};
   const hideSideBar = () => {
     const exit = document.querySelector(".exit") as HTMLElement;
     const sideBar = document.querySelector(".resp-Menu") as HTMLElement;
@@ -40,306 +24,197 @@ export default function Menu() {
     sideBar.style.transform = "translateX(100%)";
     exit.style.display = "none";
   };
+  const showSideBar = () => {
+    const exit = document.querySelector(".exit") as HTMLElement;
+    const sideBar = document.querySelector(".resp-Menu") as HTMLElement;
+    // sideBar.style.height = "fit-content";
+    sideBar.style.visibility = "visible";
+    sideBar.style.opacity = "1";
+    sideBar.style.transform = "translateX(0px)";
+    exit.style.display = "block";
+  };
   const handleDrop = () => {
-    const arrow = document.querySelector(
-      ".menuDrop-arrowIco"
-    ) as HTMLElement | null;
+    const plus = document.querySelector(".plus") as HTMLElement | null;
 
     // Ensure dropRef.current is not null
     if (dropRef.current) {
       if (!drop) {
         setDrop(true);
         dropRef.current.style.display = "flex"; // Safe to access
-
-        if (arrow) {
-          arrow.style.transform = "rotate(45deg)";
+        if (plus) {
+          plus.style.transform = "rotate(45deg)";
         }
       } else {
         setDrop(false);
         dropRef.current.style.display = "none"; // Safe to access
-
-        if (arrow) {
-          arrow.style.transform = "rotate(0)";
+        if (plus) {
+          plus.style.transform = "rotate(0)";
         }
       }
     } else {
       console.error("dropRef is null or not attached to an element");
     }
   };
-
-  const handleConsultDrop = () => {
-    const arrow = document.querySelector(
-      ".menuDrop-arrowIco"
-    ) as HTMLElement | null;
-
-    // Ensure dropRef.current is not null
-    if (dropRef2.current) {
-      if (!drop) {
-        setDrop(true);
-        dropRef2.current.style.display = "flex"; // Safe to access
-
-        if (arrow) {
-          arrow.style.transform = "rotate(45deg)";
-        }
-      } else {
-        setDrop(false);
-        dropRef2.current.style.display = "none"; // Safe to access
-
-        if (arrow) {
-          arrow.style.transform = "rotate(0)";
-        }
-      }
-    } else {
-      console.error("dropRef is null or not attached to an element");
-    }
-  };
-
-  const handleDrop2 = () => {
-    const arrow = document.querySelector(
-      ".menuDrop-arrowIco"
-    ) as HTMLElement | null;
-
-    // Ensure subDropRef.current is not null
-    if (subDropRef.current) {
-      if (!drop) {
-        setDrop(true);
-        // Change display style
-        subDropRef.current.style.display = "none";
-        console.log("up");
-        // Optionally manipulate the arrow
-        if (arrow) arrow.classList.add("rotate"); // Example of adding a class to the arrow
-      } else {
-        setDrop(false);
-        subDropRef.current.style.display = "flex";
-        console.log("down");
-        // Optionally manipulate the arrow
-        if (arrow) arrow.classList.remove("rotate"); // Example of removing a class
-      }
-    } else {
-      console.error("subDropRef is null or not attached to an element");
-    }
-  };
+  const serviceMenu = [
+    { id: "1", pathName: "/pathology", menu: "Pathology" },
+    {
+      id: "2",
+      pathName: "/ultrasound",
+      menu: "Ultrasound",
+    },
+    {
+      id: "3",
+      pathName: "/x-ray",
+      menu: "X-Ray",
+    },
+    {
+      id: "4",
+      pathName: "/cardiology",
+      menu: "Cardiology",
+    },
+    {
+      id: "5",
+      pathName: "/radiological-procedures",
+      menu: "Radiology Procedures",
+    },
+  ];
   return (
-    <nav className="menu-container">
+    <div className="menu-container">
       <div className="menu-content1">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/" className={pathname === "/" ? "active" : ""}>
+            Home
+          </Link>
         </li>
         <li>
           Services
-          <IoIosArrowDown className="menu-arrowIco" />
+          <MdKeyboardArrowDown className="serviceIco" />
           <div className="menuDrop-container">
             <ul>
-              <li>
-                <Link href="/pathology">Pathology</Link>
-              </li>
-              <li>
-                <Link href="/ultrasound-scan">UltraSound</Link>
-                {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-              </li>
-              <li>
-                <Link href="/x-ray">X-Ray</Link>
-                {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-              </li>
-              <li>
-                <Link href="/doppler-scan">Doppler Scan</Link>
-                {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-              </li>
-              <li id="cardiologyDrop">
-                <Link href="/cardiology-test">Cardiology</Link>
-                <MdKeyboardArrowRight className="menuDrop-arrowIco" />
-                <div className="subMenu-drop">
-                  <ul>
-                    <li>
-                      <Link href="/ecg-test">ECG</Link>
-                    </li>
-                    <li>
-                      <Link href="/echo-test">ECHO</Link>
-                    </li>
-                    <li>
-                      <Link href="/tmt-test">TMT</Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <Link href="/radiological-services">
-                  Radiological Procedures{" "}
-                </Link>
-                {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-              </li>
+              {serviceMenu.map((x) => (
+                <li key={x.id}>
+                  <Link
+                    href={x.pathName}
+                    className={pathname === x.pathName ? "active" : ""}
+                  >
+                    {x.menu}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </li>
         <li>
-          <Link href="/health-packages">Health Packages</Link>
+          <Link
+            href="/health-package"
+            className={pathname === "/health-package" ? "active" : ""}
+          >
+            Health Package
+          </Link>
         </li>
         <li>
-          Consultation
-          <IoIosArrowDown className="menu-arrowIco" />
-          <div className="menuDrop-container">
-            <ul>
-              <li>
-                <Link href="/diabetologist-consultation-in-bangalore">
-                  Diabetologist
-                </Link>
-              </li>
-              <li>
-                <Link href="/gynecologist-consultation-in-bangalore">
-                  Gynaecologist
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <Link
+            href="/consultation"
+            className={pathname === "/consultation" ? "active" : ""}
+          >
+            Consultation
+          </Link>
         </li>
         <li>
-          <Link href="/about-us">About Us</Link>
+          <Link
+            href="/about-us"
+            className={pathname === "/about-us" ? "active" : ""}
+          >
+            About Us
+          </Link>
         </li>
         <li>
-          <Link href="/contact-us">Contact Us</Link>
+          <Link
+            href="/contact-us"
+            className={pathname === "/contact-us" ? "active" : ""}
+          >
+            Contact Us
+          </Link>
         </li>
       </div>
+      {/* -----------------------respMenu------------------------------- */}
       <div className="menu-content2">
         <MdMenu className="menuIcon" onClick={showSideBar} />
         <div className="resp-Menu">
           <div className="inner-RespMenu">
             <li>
               <div className="inner-RespMenuHead">
-                {/* <Image src={logo} alt="logo" className="exit" /> */}
-
+                <Image src={logo} alt="logo" className="exit" />
                 <HiMiniXMark
                   className="innerResp-MenuHeadIco"
                   onClick={hideSideBar}
                 />
               </div>{" "}
-              <Link href="/" onClick={hideSideBar}>
+              <Link
+                href="/"
+                className={pathname === "/" ? "active" : ""}
+                onClick={hideSideBar}
+              >
                 Home
               </Link>
             </li>
-
+            <li>
+              <Link
+                href="/projects"
+                className={pathname === "/about-us" ? "active" : ""}
+                onClick={hideSideBar}
+              >
+                Projects{" "}
+              </Link>
+            </li>
             <li>
               <div className="respMenuList">
-                Services
+                <Link
+                  href="/services"
+                  className={pathname === "/services" ? "active" : ""}
+                  onClick={hideSideBar}
+                >
+                  Services
+                </Link>
                 <span>
-                  <IoIosArrowDown
-                    className="menu-arrowIco"
-                    onClick={handleDrop}
-                  />
+                  <AiOutlinePlus className="plus" onClick={handleDrop} />
                 </span>
               </div>
               {/* ---------------------------respDropDown-------------------------------------------- */}
               <div className="respDrop" ref={dropRef}>
                 <ul>
-                  <li>
-                    <Link href="/pathology-test" onClick={hideSideBar}>
-                      Pathology
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/ultrasound-scan" onClick={hideSideBar}>
-                      UltraSound
-                    </Link>
-                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-                  </li>
-                  <li>
-                    <Link href="/x-ray" onClick={hideSideBar}>
-                      X-Ray
-                    </Link>
-                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-                  </li>
-                  <li>
-                    <Link href="/doppler-scan" onClick={hideSideBar}>
-                      Doppler Scan
-                    </Link>
-                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-                  </li>
-                  <li id="resp-cardiology">
-                    <span>
-                      <Link href="/cardiology-test" onClick={hideSideBar}>
-                        Cardiology
+                  {serviceMenu.map((x) => (
+                    <li key={x.id}>
+                      <Link
+                        href={x.pathName}
+                        className={pathname === x.pathName ? "active" : ""}
+                        onClick={hideSideBar}
+                      >
+                        {x.menu}
                       </Link>
-                      <IoIosArrowDown
-                        className="menuDrop-arrowIco"
-                        onClick={handleDrop2}
-                      />
-                    </span>
-                    <div className="resp-subMenu" ref={subDropRef}>
-                      <ul>
-                        <li>
-                          <Link href="/ecg-test" onClick={hideSideBar}>
-                            ECG
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/echo-test" onClick={hideSideBar}>
-                            ECHO
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/tmt-test" onClick={hideSideBar}>
-                            TMT
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                  </li>
-                  <li>
-                    <Link href="/radiological-services" onClick={hideSideBar}>
-                      Radiological Procedures
-                    </Link>
-                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </li>
             <li>
               {" "}
-              <Link href="/health-packages" onClick={hideSideBar}>
-                Health Packages
-              </Link>
-            </li>
-            <li>
-              <div className="respMenuList">
-                <Link href="/">Consultation</Link>
-                <span>
-                  <IoIosArrowDown
-                    className="menu-arrowIco"
-                    onClick={handleConsultDrop}
-                  />
-                </span>
-              </div>
-              <div className="respDrop" ref={dropRef2}>
-                <ul>
-                  <li>
-                    <Link
-                      href="/diabetologist-consultation-in-bangalore"
-                      onClick={hideSideBar}
-                    >
-                      Diabetologist
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/gynecologist-consultation-in-bangalore"
-                      onClick={hideSideBar}
-                    >
-                      Gynaecologist
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              {" "}
-              <Link href="/about-us" onClick={hideSideBar}>
+              <Link
+                href="/about-us"
+                className={pathname === "/about-us" ? "active" : ""}
+                onClick={hideSideBar}
+              >
                 About Us
               </Link>
             </li>
 
             <li>
               {" "}
-              <Link href="/contact-us" onClick={hideSideBar}>
+              <Link
+                href="/contact-us"
+                className={pathname === "/contact-us" ? "active" : ""}
+                onClick={hideSideBar}
+              >
                 Contact Us
               </Link>
             </li>
@@ -348,13 +223,15 @@ export default function Menu() {
               <div className="menuContainerBtn">
                 {" "}
                 <Link href="/">
-                  <button onClick={handleAppointment}>Book Now </button>
+                  <button>SPEAK TO EXPERT </button>
                 </Link>
               </div>
             </li>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
-}
+};
+
+export default Menu;

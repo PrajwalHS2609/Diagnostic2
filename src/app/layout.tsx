@@ -2,7 +2,7 @@ import "./globals.css";
 import TopBar from "@/components/TopBar/Topbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/components/Footer/Footer";
-import NavBar from "@/components/NavBar/NavBar";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function RootLayout({
   children,
@@ -20,7 +20,7 @@ export default function RootLayout({
       </head>
       <body>
         <TopBar />
-        <NavBar />
+        <Navbar />
         {children}
         <Footer />
       </body>
