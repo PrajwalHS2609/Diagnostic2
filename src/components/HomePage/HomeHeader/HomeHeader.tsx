@@ -44,7 +44,7 @@ const HomeHeader = () => {
                 </h2>
                 <p>{x.para}</p>
                 <span>
-                  <Link href="/">
+                  <Link href="/contact-us">
                     <button className="homeheader-btn1">Contact Now</button>
                   </Link>
                   <Link href="/">

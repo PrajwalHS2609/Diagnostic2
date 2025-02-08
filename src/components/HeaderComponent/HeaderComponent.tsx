@@ -80,10 +80,10 @@ const HeaderComponent = ({
           </h2>
           <p>{para}</p>
           <span>
-            <Link href="/">
+            <Link href="/contact-us">
               <button className="headerComponent-btn1">Contact Now</button>
             </Link>
-            <Link href="/">
+            <Link href="">
               <button className="headerComponent-btn2" onClick={handleAppointment}>
                 Book Appointment Now
               </button>
