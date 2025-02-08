@@ -1,13 +1,13 @@
 import React from "react";
-import "./HomeSubServices.css";
-const HomeSubServicesHead = () => {
+import "./HomeBlog.css";
+const homeBlogHead = () => {
   return (
-    <div className="homeSubServicesHead-container">
-      <div className="homeSubServicesHead-content">
-        <h6>OUR SERVICES</h6>
+    <div className="homeBlogHead-container">
+      <div className="homeBlogHead-content">
+        <h6>OUR BLOG</h6>
         <h2>All The Great Work That We Done</h2>
       </div>
-      <div className="homeSubServicesHead-content">
+      <div className="homeBlogHead-content">
         <p>
           We are privileged to work with hundreds of future-thinking
           medial,including many of the world’s top hardware, software, and
@@ -18,4 +18,4 @@ const HomeSubServicesHead = () => {
   );
 };
 
-export default HomeSubServicesHead;
+export default homeBlogHead;

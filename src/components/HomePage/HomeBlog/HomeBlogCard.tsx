@@ -1,8 +1,8 @@
 import React from "react";
-import "./HomeSubServices.css";
+import "./HomeBlog.css";
 import Link from "next/link";
-const HomeSubServicesCard = () => {
-  const SubServices = [
+const homeBlogCard = () => {
+  const blog = [
     {
       id: 1,
       img: "https://medilo-html.netlify.app/assets/img/project_1.jpg",
@@ -30,12 +30,12 @@ const HomeSubServicesCard = () => {
   ];
   return (
     <>
-      {SubServices.map((x) => (
-        <div className="homeSubServiceCard-container" key={x.id}>
+      {blog.map((x) => (
+        <div className="homeBlogCard-container" key={x.id}>
           <Link href={x.link}>
             <img src={x.img} alt={x.title} />
-            <div className="homeSubServiceCard-content">
-              <div className="homeSubServiceCard-item">
+            <div className="homeBlogCard-content">
+              <div className="homeBlogCard-item">
                 <h5>{x.title}</h5>
                 <p>{x.description}</p>
               </div>
@@ -47,4 +47,4 @@ const HomeSubServicesCard = () => {
   );
 };
 
-export default HomeSubServicesCard;
+export default homeBlogCard;

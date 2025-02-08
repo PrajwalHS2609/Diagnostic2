@@ -5,7 +5,7 @@ const HomeServicesHead = () => {
   return (
     <div className="homeServicesHead-container">
       <div className="homeServicesHead-content">
-        <h6>OUR BEST SERVICE</h6>
+        <h6>OUR DIAGNOSTIC SERVICE</h6>
         <h2>Accurate Results for Better Health</h2>
       </div>
       <div className="homeServicesHead-content">

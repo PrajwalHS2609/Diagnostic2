@@ -15,7 +15,7 @@ const HomeAboutUsContent = () => {
   };
   return (
     <div className="homeAboutContent-container">
-      <h6>OUR ABOUT US</h6>
+      <h6>ABOUT US</h6>
       <h2>Celebrating Over 26 Years of Diagnostic Excellence. </h2>
       <p>
         We are honored to collaborate with numerous forward-thinking medical

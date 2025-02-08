@@ -5,7 +5,7 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import HomeServices from "@/components/HomePage/HomeServices/HomeServices";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
-import HomeSubServices from "@/components/HomePage/HomeSubServices/HomeSubServices";
+import HomeSubServices from "@/components/HomePage/HomeBlog/HomeBlog";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 export default function Home() {
   return (
@@ -13,11 +13,11 @@ export default function Home() {
       <HomeHeader />
       <HomeServices />
       <HomeAboutUs />
+      <HomeWhy />
       <HomeKey />
-      <HomeSubServices />
       <HomeDoctor />
       <HomeTestimonial />
-      <HomeWhy />
+      <HomeSubServices />
     </div>
   );
 }
