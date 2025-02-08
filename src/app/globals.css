@@ -7,10 +7,12 @@
 :root {
   --customColor1: #2ea6f7;
   --customColor2: #002261;
-  --customColor3: #E8EDF0;
-
+  --customColor3: #e8edf0;
 }
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", serif;
 }
 .page-container {
