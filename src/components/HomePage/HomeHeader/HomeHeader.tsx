@@ -7,6 +7,14 @@ import Image from "next/image";
 import headerHomebanner2 from "@/Images/homeHeader/homeHeaderBanner2.png";
 
 const HomeHeader = () => {
+  const handleAppointment = () => {
+    const bookPopUpElement = document.querySelector(".bookPopUp");
+    if (bookPopUpElement) {
+      (bookPopUpElement as HTMLElement).style.visibility = "visible";
+    } else {
+      console.warn("Element with class 'bookPopUp' not found");
+    }
+  };
   const headerContent = [
     {
       id: 1,
@@ -40,7 +48,7 @@ const HomeHeader = () => {
                     <button className="homeheader-btn1">Contact Now</button>
                   </Link>
                   <Link href="/">
-                    <button className="homeheader-btn2">Discover More</button>
+                    <button className="homeheader-btn2" onClick={handleAppointment}>Book Appointment Now</button>
                   </Link>
                 </span>
               </div>

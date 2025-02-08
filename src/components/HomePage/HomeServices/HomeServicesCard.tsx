@@ -66,7 +66,7 @@ const HomeServicesCard = () => {
       description:
         "TMT (Treadmill Test) evaluates heart function under stress to detect issues like blockages and arrhythmias.",
       icon: <TbTreadmill />,
-      link:"/tmt"
+      link:"/tmt-test"
     },
     {
       id: 8,

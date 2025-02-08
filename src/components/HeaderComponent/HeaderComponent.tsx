@@ -31,6 +31,15 @@ const HeaderComponent = ({
   para,
   bread,
 }: HeaderProps) => {
+  const handleAppointment = () => {
+    const bookPopUpElement = document.querySelector(".bookPopUp");
+    if (bookPopUpElement) {
+      (bookPopUpElement as HTMLElement).style.visibility = "visible";
+    } else {
+      console.warn("Element with class 'bookPopUp' not found");
+    }
+  };
+
   return (
     <div className="headerComponent-container">
       <div className="headerComponent-imgContainer">
@@ -70,6 +79,16 @@ const HeaderComponent = ({
             <span>{highlight}</span> {head}
           </h2>
           <p>{para}</p>
+          <span>
+            <Link href="/">
+              <button className="headerComponent-btn1">Contact Now</button>
+            </Link>
+            <Link href="/">
+              <button className="headerComponent-btn2" onClick={handleAppointment}>
+                Book Appointment Now
+              </button>
+            </Link>
+          </span>
         </div>
         <span>
           <h5>
