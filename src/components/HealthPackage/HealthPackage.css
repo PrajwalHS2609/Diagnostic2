@@ -1,0 +1,177 @@
+.healthPackage {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.healthPackageHeader {
+  /* border: solid green; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.healthPackageHeader > img {
+  width: 1000px;
+  height: 400px;
+  object-fit: cover;
+}
+.healthWellness {
+  /* border: solid blue; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+.healthWellnessHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.healthWellnessHead > h2 {
+  text-align: center;
+  font-size: 40px;
+  width: 80%;
+  font-weight: bolder;
+}
+.healthWellnessMain {
+  /* border: solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.healthWellnessMain-Content1 {
+  /* border: solid blue; */
+  width: fit-content;
+}
+.healthWellnessMain-Content2 {
+  /* border: solid; */
+  width: 50%;
+  padding: 20px;
+}
+.healthWellnessMainList > ul > li {
+  list-style: none;
+  margin: 20px;
+}
+.healthWellnessMainList-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.healthWellnessMainList-btn > a > button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--customColor1);
+  transition: 300ms ease-in-out;
+  font-weight: bold;
+  &:hover {
+    background-color: white;
+    color: var(--customColor1);
+  }
+}
+.healthPackageTable {
+  /* border: solid red; */
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+.healthPackageTable > table {
+  border: 1px solid black;
+  width: 80%;
+}
+.healthPackageTable > table > tr {
+  border: 1px solid black;
+  padding: 10px;
+}
+.healthPackageTable > table > tr > th {
+  border: 1px solid black;
+  text-align: center;
+  background-color: var(--customColor2);
+  color: white;
+  padding: 10px;
+  width: 200px;
+}
+.healthPackageTable > table > tr > th:nth-child(2) {
+  width: 350px;
+}
+.healthPackageTable > table > tr:nth-child(26) > td {
+  background-color: rgb(249, 71, 71);
+  color: white;
+}
+.healthPackageTable > table > tr:nth-child(27) > td {
+  background-color: rgb(249, 71, 71);
+  color: white;
+}
+.healthPackageTable > table > tr:nth-child(28) > td {
+  background-color: rgb(249, 71, 71);
+  color: white;
+}
+.healthPackageTable > table > tr:nth-child(30) > td {
+  background-color: rgb(249, 71, 71);
+  color: white;
+}
+.healthPackageTable > table > tr:nth-child(38) > td {
+  color: rgb(249, 71, 71);
+}
+.healthPackageTable > table > tr > td {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #d3ffd0;
+  color: blue;
+  font-weight: 500;
+  padding: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .healthPackageHeader > img {
+    width: 100%;
+  }
+  .healthWellnessMain {
+    /* border: solid red; */
+    flex-direction: column;
+  }
+  .healthWellness {
+    /* border: solid blue; */
+    padding: 10px;
+  }
+  .healthWellnessHead > h2 {
+    width: 100%;
+    font-size: 30px;
+
+  }
+  .healthWellnessMain-Content1 {
+    /* border: solid blue; */
+    width: 100%;
+  }
+  .healthWellnessMain-Content1 > img {
+    width: 100%;
+  }
+  .healthWellnessMain-Content2 {
+    /* border: solid; */
+    width: 100%;
+    padding: 20px;
+  }
+  .healthWellnessMainList > ul > li {
+    width: 100%;
+  }
+  .healthPackageTable {
+    /* border: solid red; */
+    justify-content: flex-start;
+  }
+}

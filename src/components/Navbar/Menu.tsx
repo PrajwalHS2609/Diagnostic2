@@ -174,9 +174,6 @@ export default function Menu() {
           </div>
         </li>
         <li>
-          <Link href="/health-packages">Health Packages</Link>
-        </li>
-        <li>
           Consultation
           <IoIosArrowDown className="menu-arrowIco" />
           <div className="menuDrop-container">
@@ -191,8 +188,21 @@ export default function Menu() {
                   Gynaecologist
                 </Link>
               </li>
+              <li>
+                <Link href="/cardiologist-consultation-in-bangalore">
+                  Cardiologist
+                </Link>
+              </li>
+              <li>
+                <Link href="/orthopedist-consultation-in-bangalore">
+                Orthopedist
+                </Link>
+              </li>
             </ul>
           </div>
+        </li>
+        <li>
+          <Link href="/health-packages">Health Packages</Link>
         </li>
         <li>
           <Link href="/about-us">About Us</Link>
