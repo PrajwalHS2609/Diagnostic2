@@ -1,3 +1,4 @@
+"use client"
 import "./globals.css";
 import TopBar from "@/components/TopBar/Topbar";
 import "bootstrap/dist/css/bootstrap.min.css";
