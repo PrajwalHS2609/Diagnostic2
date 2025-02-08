@@ -16,11 +16,12 @@ const HomeAboutUsContent = () => {
   return (
     <div className="homeAboutContent-container">
       <h6>OUR ABOUT US</h6>
-      <h2>More Than 26+ Years About Provide Medical.</h2>
+      <h2>Celebrating Over 26 Years of Diagnostic Excellence. </h2>
       <p>
-        We are privileged to work with hundreds of future-thinking medial,
-        including many of the world’s top hardware, software, and brands , feel
-        safe and comfortable in establishing.
+        We are honored to collaborate with numerous forward-thinking medical
+        professionals and esteemed global brands in hardware and software. These
+        partnerships enable us to provide a safe and comfortable environment for
+        our patients, ensuring the highest standards of diagnostic care.
       </p>
       <div className="homeAboutContent-wrapper">
         <div className="homeAboutContent-content">

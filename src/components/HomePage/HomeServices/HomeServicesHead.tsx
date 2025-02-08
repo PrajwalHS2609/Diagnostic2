@@ -6,13 +6,15 @@ const HomeServicesHead = () => {
     <div className="homeServicesHead-container">
       <div className="homeServicesHead-content">
         <h6>OUR BEST SERVICE</h6>
-        <h2>High-Quality Services This Doctor</h2>
+        <h2>Accurate Results for Better Health</h2>
       </div>
       <div className="homeServicesHead-content">
         <p>
-          We are privileged to work with hundreds of future-thinking medial,
-          including many of the world’s top hardware, software, and brands ,
-          feel safe and comfortable in establishing.
+          We are honored to collaborate with numerous forward-thinking medical
+          professionals and esteemed global brands in hardware and software.
+          These partnerships enable us to provide a safe and comfortable
+          environment for our patients, ensuring the highest standards of
+          diagnostic care.
         </p>
       </div>
     </div>

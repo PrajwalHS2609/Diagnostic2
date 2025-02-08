@@ -1,49 +1,49 @@
 import React from "react";
 import "./HomeWhy.css";
-import { FaSuitcaseMedical } from "react-icons/fa6";
+import { GrCertificate } from "react-icons/gr";
 import { GiMedicines } from "react-icons/gi";
 import { BsFillHeartPulseFill } from "react-icons/bs";
+import { FaUserDoctor } from "react-icons/fa6";
 import { FaHospitalUser } from "react-icons/fa";
 import { GiTestTubes } from "react-icons/gi";
-import { FaIndianRupeeSign } from "react-icons/fa6";
 
 const HomeWhyCard = () => {
   const whyCard = [
     {
       id: 1,
-      icon: <FaSuitcaseMedical />,
-      title: "Service & Check",
-      para: "Medical competitor research startup to financial",
+      icon: <GrCertificate />,
+      title: "Accreditation and Certifications",
+      para: "Our NABL-accredited diagnostic center upholds international standards, offering reliable testing and calibration services for accurate results.",
     },
     {
       id: 2,
       icon: <GiMedicines />,
-      title: "Medical Advices",
-      para: "Medical competitor research startup to financial",
+      title: "Advanced Technology",
+      para: "We utilize state-of-the-art equipment and advanced technology to ensure precise, reliable, and high-quality diagnostic results.",
     },
     {
       id: 3,
       icon: <BsFillHeartPulseFill />,
-      title: "Emergency Help",
-      para: "Medical competitor research startup to financial",
+      title: "Comprehensive Range of Services:",
+      para: "Our facility offers a wide array of diagnostic tests, including imaging, pathology, and specialized screenings, all under one roof for your convenience.",
     },
     {
       id: 4,
       icon: <GiTestTubes />,
-      title: "Medical Research",
-      para: "Medical competitor research startup to financial",
+      title: "Experienced Medical Professionals",
+      para: "Our team of skilled radiologists, pathologists, and technicians is committed to precise diagnoses and compassionate care.",
     },
     {
       id: 5,
-      icon: <FaHospitalUser />,
+      icon: <FaUserDoctor />,
       title: "Qualified Doctors",
-      para: "Medical competitor research startup to financial",
+      para: "We prioritize promptness without compromising accuracy, ensuring that your test results are delivered on time to facilitate swift medical decisions.",
     },
     {
       id: 6,
-      icon: <FaIndianRupeeSign />,
-      title: "Affordable Prices",
-      para: "Medical competitor research startup to financial",
+      icon: <FaHospitalUser />,
+      title: "Patient-Centric Approach",
+      para: "Our center prioritizes patient comfort with a clean, hygienic environment and a supportive staff to assist you throughout the diagnostic process. ",
     },
   ];
   return (
@@ -59,6 +59,10 @@ const HomeWhyCard = () => {
           </div>
         </div>
       ))}
+      <p>
+        By focusing on these key areas, we strive to provide exceptional
+        diagnostic services that you can trust.
+      </p>
     </div>
   );
 };

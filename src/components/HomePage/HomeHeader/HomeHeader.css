@@ -3,16 +3,16 @@
   height: 600px;
   width: 100%;
   position: relative;
-  background: linear-gradient(to right, #2ea6f7, #2ea6f7, #002261);
+  /* background: linear-gradient(to right, #2ea6f7, #2ea6f7, #002261); */
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.homeHeader-container > img {
+.homeHeader-container > video {
   /* border: solid blue; */
   height: 100%;
-  width: fit-content;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 .homeHeader-cover {
   width: 100%;
@@ -54,18 +54,18 @@
 }
 .homeHeader-coverContent > span > a > button {
   font-weight: 500;
+  border-radius: 30px;
 }
 .homeheader-btn1 {
   background-color: white;
-  border-radius: 30px;
   padding: 10px;
-  border-radius: 30px;
   border: solid white;
 }
 .homeheader-btn2 {
   border: solid var(--customColor2);
   padding: 10px;
-  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.26);
 }
 .carousel {
   width: 100%;
@@ -76,6 +76,7 @@
     /* border: solid red; */
     height: 100%;
     flex-direction: column;
+    background: linear-gradient(to right, #2ea6f7, #2ea6f7, #002261);
   }
 
   .homeHeader-cover {
@@ -92,8 +93,13 @@
     width: 100%;
   }
   .homeHeader-coverContent > h2 {
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     font-weight: bold;
+  }
+  .homeHeader-coverContent > span > a > button {
+    font-weight: 600;
+    border-radius: 10px;
+  
   }
 }
