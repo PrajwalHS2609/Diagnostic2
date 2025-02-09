@@ -22,7 +22,7 @@ const CardiologyCard = () => {
           img: "https://first-c9d21.web.app/assets/Stress%20Test-C7Ur_itU.png",
           title: "Stress Test",
           description:
-            "Hormonal tests at Pathocon Diagnostics help assess and balance crucial hormones, providing valuable insights for personalized healthcare and maintaining overall well-being.",
+            "Hormonal tests at  Diagnostics help assess and balance crucial hormones, providing valuable insights for personalized healthcare and maintaining overall well-being.",
         },
         {
           id: 4,

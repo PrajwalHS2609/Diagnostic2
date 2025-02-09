@@ -110,3 +110,25 @@
         width: 100%;
       }
 }
+@media screen and (min-width:768px) and (max-width:990px) {
+  .homeBlogHead-container {
+    /* border: solid green; */
+    flex-direction: column;
+  }
+  .homeBlogHead-content {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .homeBlogHead-content > h2 {
+    font-weight: 600;
+    text-align: center;
+  }
+  .homeBlogCard-content {
+    /* border: solid black; */
+    width: 100%;
+  }
+}

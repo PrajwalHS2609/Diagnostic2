@@ -38,6 +38,7 @@
   color: white;
   font-weight: 500;
   font-size: 20px;
+  text-align: center;
 }
 .keyPoint-icon {
   color: white;
@@ -68,5 +69,29 @@
     gap: 10px;
     padding: 30px;
     width: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .homeKey-content {
+    /* border: solid green; */
+    flex-wrap: wrap;
+  }
+  .homeKey-item {
+    /* border: solid red; */
+    border-right: none;
+    border-bottom: solid 1px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    width: 50%;
+  }
+  .homeKey-item:nth-child(3) {
+    border: none;
+  }
+  .homeKey-item:nth-child(even) {
+    border-left: solid 1px grey;
   }
 }

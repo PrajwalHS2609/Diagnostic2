@@ -155,3 +155,20 @@
     padding: 0px;
   }
 }
+@media screen and (min-width: 768px) and (max-width:990px) {
+  .homeTestimonial-container {
+    flex-direction: column;
+  }
+  .homeTestimonial-content:nth-child(1) {
+    width: 80%;
+  }
+  .homeTestimonial-content:nth-child(2) {
+    width: 80%;
+  }
+  .homeTestimonialMain-wrapper {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+  }
+}
