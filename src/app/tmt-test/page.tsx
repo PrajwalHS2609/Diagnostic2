@@ -5,21 +5,21 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
-import ultraSound1 from "@/Images/ultrasound/ultrasound1.png";
-import ultraSound2 from "@/Images/ultrasound/ultrasound2.png";
-import ultraSound3 from "@/Images/ultrasound/ultrasound3.png";
+import tmt1 from "@/Images/tmt/tmt1.png";
+import tmt2 from "@/Images/tmt/tmt2.png";
+import tmt3 from "@/Images/tmt/tmt3.png";
 export default function ECGTest() {
   return (
     <div className="page-container">
       <HeaderComponent
-        imageSrc1={ultraSound1.src}
-        imageSrc2={ultraSound2.src}
-        imageSrc3={ultraSound3.src}
-        alt="ECG Banner"
+        imageSrc1={tmt1.src}
+        imageSrc2={tmt2.src}
+        imageSrc3={tmt3.src}
+        alt="TMT Banner"
         head="Test in Bangalore "
-        highlight="ECG "
+        highlight="TMT "
         para="Accurate insights to keep your health moving forward"
-        bread="ECG Test"
+        bread="TMT Test"
       />
       <HomeAboutUs />
       <HomeKey />

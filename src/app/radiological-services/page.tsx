@@ -4,16 +4,16 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
-import ultraSound1 from "@/Images/ultrasound/ultrasound1.png";
-import ultraSound2 from "@/Images/ultrasound/ultrasound2.png";
-import ultraSound3 from "@/Images/ultrasound/ultrasound3.png";
+import radiological1 from "@/Images/radiological/radiological1.png";
+import radiological2 from "@/Images/radiological/radiological2.png";
+import radiological3 from "@/Images/radiological/radiological3.png";
 export default function Radiological() {
   return (
     <div className="page-container">
       <HeaderComponent
-        imageSrc1={ultraSound1.src}
-        imageSrc2={ultraSound2.src}
-        imageSrc3={ultraSound3.src}
+        imageSrc1={radiological1.src}
+        imageSrc2={radiological2.src}
+        imageSrc3={radiological3.src}
         alt="Radiological Banner"
         head=" Services in Bangalore "
         highlight="Radiological"
