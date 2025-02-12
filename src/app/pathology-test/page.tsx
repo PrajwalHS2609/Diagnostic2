@@ -4,7 +4,7 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
-import PathologyCard from "@/components/Pathology/PathologyCard";
+import PathologyCard from "@/components/Services/Pathology/PathologyCard";
 import pathalogy1 from "@/Images/pathalogy/pathalogy1.png";
 import pathalogy2 from "@/Images/pathalogy/pathalogy2.png";
 import pathalogy3 from "@/Images/pathalogy/pathalogy3.png";

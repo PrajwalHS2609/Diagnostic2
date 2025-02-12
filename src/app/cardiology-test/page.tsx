@@ -8,7 +8,7 @@ import cardiology1 from "@/Images/cardiology/cardiology1.png";
 import cardiology2 from "@/Images/cardiology/cardiology2.png";
 import cardiology3 from "@/Images/cardiology/cardiology3.png";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
-import CardiologyCard from "@/components/Cardiology/CardiologyCard";
+import CardiologyCard from "@/components/Services/Cardiology/CardiologyCard";
 const page = () => {
   return (
     <div className="page-container">

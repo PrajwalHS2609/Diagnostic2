@@ -1,5 +1,5 @@
 
-import EchoCard from "@/components/Echo/EchoCard";
+import EchoCard from "@/components/Services/Echo/EchoCard";
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";

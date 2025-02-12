@@ -4,7 +4,7 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
-import UltrasoundCard from "@/components/Ultrasound/UltrasoundCard";
+import UltrasoundCard from "@/components/Services/Ultrasound/UltrasoundCard";
 import ultraSound1 from "@/Images/ultrasound/ultrasound1.png"
 import ultraSound2 from "@/Images/ultrasound/ultrasound2.png"
 import ultraSound3 from "@/Images/ultrasound/ultrasound3.png"

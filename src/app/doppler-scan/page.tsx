@@ -1,4 +1,4 @@
-import DopplerCard from "@/components/Doppler/DopplerCard";
+import DopplerCard from "@/components/Services/Doppler/DopplerCard";
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";

@@ -194,8 +194,23 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <Link href="/orthopedist-consultation-in-bangalore">
-                Orthopedist
+                <Link href="/neurology-consultation-in-bangalore">
+                Neurology
+                </Link>
+              </li>
+              <li>
+                <Link href="/obstetrics-consultation-in-bangalore">
+                Obstetrics
+                </Link>
+              </li>
+              <li>
+                <Link href="/gastroenterology-consultation-in-bangalore">
+                Gastroenterology
+                </Link>
+              </li>
+              <li>
+                <Link href="/urology-consultation-in-bangalore">
+                Urology
                 </Link>
               </li>
             </ul>
