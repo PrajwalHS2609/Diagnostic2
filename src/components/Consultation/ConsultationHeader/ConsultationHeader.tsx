@@ -17,7 +17,6 @@ const ConsultationHeader = ({
   title,
   highlight,
   para,
-  bread,
 }: HeaderProps) => {
 
 //   const handleAppointment = () => {
