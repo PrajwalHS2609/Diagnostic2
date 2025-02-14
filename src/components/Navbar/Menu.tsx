@@ -179,22 +179,22 @@ export default function Menu() {
           <div className="menuDrop-container">
             <ul>
               <li>
-                <Link href="/diabetologist-consultation-in-bangalore">
+                <Link href="/diabetologist-consultant-in-bangalore">
                   Diabetologist
                 </Link>
               </li>
               <li>
-                <Link href="/gynecologist-consultation-in-bangalore">
+                <Link href="/gynaecologist-consultant-in-bangalore">
                   Gynaecologist
                 </Link>
               </li>
               <li>
-                <Link href="/cardiologist-consultation-in-bangalore">
+                <Link href="/cardiologist-consultant-in-bangalore">
                   Cardiologist
                 </Link>
               </li>
               <li>
-                <Link href="/neurology-consultation-in-bangalore">
+                <Link href="/neurology-consultant-in-bangalore">
                   Neurology
                 </Link>
               </li>

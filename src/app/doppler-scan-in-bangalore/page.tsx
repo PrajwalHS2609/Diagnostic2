@@ -8,6 +8,16 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import doppler1 from "@/Images/doppler/doppler1.png";
 import doppler2 from "@/Images/doppler/doppler2.png";
 import doppler3 from "@/Images/doppler/doppler3.png";
+export const metadata = {
+  title: "Doppler Scanning in Bangalore | Best Doppler Scans Near Me",
+  description:
+    "Doppler Scanning in Bangalore, it is a gateway to understanding the intricate flow of blood, offering insights that are crucial in diagnosing and managing various medical conditions.",
+  canonical: "https://diagnosticscenter.co.in/doppler-scanning-in-bangalore ",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
 export default function DopplerScan() {
   return (
     <div className="page-container">

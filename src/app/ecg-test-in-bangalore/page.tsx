@@ -1,4 +1,3 @@
-
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
@@ -8,6 +7,16 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import ecg1 from "@/Images/ecg/ecg1.png";
 import ecg2 from "@/Images/ecg/ecg2.png";
 import ecg3 from "@/Images/ecg/ecg3.png";
+export const metadata = {
+  title: "ECG Test in Bangalore | Best ECG Tests Near Me",
+  description:
+    " ECG Test in Bangalore a fundamental diagnostic tool in cardiology, measures the electrical activity of the heart, unveiling essential insights into its health. ",
+  canonical: "https://diagnosticscenter.co.in/ecg-test-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
 export default function ECGTest() {
   return (
     <div className="page-container">

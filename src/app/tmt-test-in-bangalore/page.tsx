@@ -1,4 +1,3 @@
-
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import HomeAboutUs from "@/components/HomePage/HomeAboutUs/HomeAboutUs";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
@@ -8,7 +7,17 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import tmt1 from "@/Images/tmt/tmt1.png";
 import tmt2 from "@/Images/tmt/tmt2.png";
 import tmt3 from "@/Images/tmt/tmt3.png";
-export default function ECGTest() {
+export const metadata = {
+  title: "TMT Test in Bangalore | Best Treadmill Test Near Me",
+  description:
+    "TMT Test in Bangalore is a dynamic tool in evaluating the heart’s response to exertion, offering valuable information about cardiovascular fitness and potential cardiac issues.",
+  canonical: "https://diagnosticscenter.co.in/tmt-test-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
+export default function TMTTest() {
   return (
     <div className="page-container">
       <HeaderComponent

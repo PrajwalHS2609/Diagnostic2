@@ -5,10 +5,19 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import XrayCard from "@/components/Services/Xray/XrayCard";
-import xray1 from "@/Images/xray/x-ray1.png"
-import xray2 from "@/Images/xray/x-ray2.png"
-import xray3 from "@/Images/xray/x-ray3.png"
-
+import xray1 from "@/Images/xray/x-ray1.png";
+import xray2 from "@/Images/xray/x-ray2.png";
+import xray3 from "@/Images/xray/x-ray3.png";
+export const metadata = {
+  title: "Digital X-Ray in Bangalore | Best X-Ray Test Near Me",
+  description:
+    "Digital X-Ray in Bangalore are at the forefront of this evolution, offering a seamless blend of cutting-edge technology and compassionate care. ",
+  canonical: "https://diagnosticscenter.co.in/digital-x-ray-test-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
 export default function UltrasoundScan() {
   return (
     <div className="page-container">
@@ -22,11 +31,11 @@ export default function UltrasoundScan() {
         para="Creating Life's masterpiece, one kick at a time"
         bread="X-Ray"
       />
-      <XrayCard/>
+      <XrayCard />
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
-      <HomeTestimonial/>
+      <HomeTestimonial />
       <HomeWhy />
     </div>
   );

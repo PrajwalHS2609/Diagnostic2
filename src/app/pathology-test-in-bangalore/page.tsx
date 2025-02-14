@@ -8,6 +8,16 @@ import PathologyCard from "@/components/Services/Pathology/PathologyCard";
 import pathalogy1 from "@/Images/pathalogy/pathalogy1.png";
 import pathalogy2 from "@/Images/pathalogy/pathalogy2.png";
 import pathalogy3 from "@/Images/pathalogy/pathalogy3.png";
+export const metadata = {
+  title: "Pathology Test in Bangalore | Blood Tests Near Me",
+  description:
+    "Pathology Test in Bangalore. Discover the Convenience of a Healthier Life with our Premium Service. Book an Appointment Today!",
+  canonical: "https://diagnosticscenter.co.in/pathology-test-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,"
+  ],
+};
 export default function Pathology() {
   return (
     <div className="page-container">

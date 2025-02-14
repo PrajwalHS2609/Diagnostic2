@@ -9,6 +9,16 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import echo1 from "@/Images/echo/echo1.png";
 import echo2 from "@/Images/echo/echo2.png";
 import echo3 from "@/Images/echo/echo3.png";
+export const metadata = {
+  title: "ECHO Test in Bangalore | Best ECHO Tests Near Me",
+  description:
+    "ECHO Test in Bangalore utilize ultrasound technology to provide detailed and real-time images of the heart’s structure and function.",
+  canonical: "https://diagnosticscenter.co.in/echo-test-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
 export default function EchoTest() {
   return (
     <div className="page-container">
