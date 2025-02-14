@@ -131,41 +131,41 @@ export default function Menu() {
           <div className="menuDrop-container">
             <ul>
               <li>
-                <Link href="/pathology-test">Pathology</Link>
+                <Link href="/pathology-test-in-bangalore">Pathology</Link>
               </li>
               <li>
-                <Link href="/ultrasound-scan">UltraSound</Link>
+                <Link href="/ultrasound-scan-in-bangalore">UltraSound</Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
               </li>{" "}
               <li>
-                <Link href="/x-ray" onClick={hideSideBar}>
+                <Link href="/x-ray-test-in-bangalore" onClick={hideSideBar}>
                   X-ray
                 </Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
               </li>
               <li>
-                <Link href="/doppler-scan">Doppler Scan</Link>
+                <Link href="/doppler-scan-in-bangalore">Doppler Scan</Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
               </li>
               <li id="cardiologyDrop">
-                <Link href="/cardiology-test">Cardiology</Link>
+                <Link href="/cardiology-test-in-bangalore">Cardiology</Link>
                 <MdKeyboardArrowRight className="menuDrop-arrowIco" />
                 <div className="subMenu-drop">
                   <ul>
                     <li>
-                      <Link href="/ecg-test">ECG</Link>
+                      <Link href="/ecg-test-in-bangalore">ECG</Link>
                     </li>
                     <li>
-                      <Link href="/echo-test">ECHO</Link>
+                      <Link href="/echo-test-in-bangalore">ECHO</Link>
                     </li>
                     <li>
-                      <Link href="/tmt-test">TMT</Link>
+                      <Link href="/tmt-test-in-bangalore">TMT</Link>
                     </li>
                   </ul>
                 </div>
               </li>
               <li>
-                <Link href="/radiological-services">
+                <Link href="/radiological-procedures-in-bangalore">
                   Radiological Procedures
                 </Link>
                 {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
@@ -195,29 +195,27 @@ export default function Menu() {
               </li>
               <li>
                 <Link href="/neurology-consultation-in-bangalore">
-                Neurology
+                  Neurology
                 </Link>
               </li>
               <li>
                 <Link href="/obstetrics-consultation-in-bangalore">
-                Obstetrics
+                  Obstetrics
                 </Link>
               </li>
               <li>
                 <Link href="/gastroenterology-consultation-in-bangalore">
-                Gastroenterology
+                  Gastroenterology
                 </Link>
               </li>
               <li>
-                <Link href="/urology-consultation-in-bangalore">
-                Urology
-                </Link>
+                <Link href="/urology-consultation-in-bangalore">Urology</Link>
               </li>
             </ul>
           </div>
         </li>
         <li>
-          <Link href="/health-packages">Health Packages</Link>
+          <Link href="/health-packages-in-bangalore">Health Packages</Link>
         </li>
         <li>
           <Link href="/about-us">About Us</Link>
@@ -258,31 +256,43 @@ export default function Menu() {
               <div className="respDrop" ref={dropRef}>
                 <ul>
                   <li>
-                    <Link href="/pathology" onClick={hideSideBar}>
+                    <Link
+                      href="/pathology-test-in-bangalore"
+                      onClick={hideSideBar}
+                    >
                       Pathology
                     </Link>
                   </li>
                   <li>
-                    <Link href="/ultrasound-scan" onClick={hideSideBar}>
+                    <Link
+                      href="/ultrasound-scan-in-bangalore"
+                      onClick={hideSideBar}
+                    >
                       UltraSound
                     </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li>
-                    <Link href="/doppler-scan" onClick={hideSideBar}>
+                    <Link
+                      href="/doppler-scan-in-bangalore"
+                      onClick={hideSideBar}
+                    >
                       Doppler Scan
                     </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li>
-                    <Link href="/x-ray" onClick={hideSideBar}>
+                    <Link href="/x-ray-test-in-bangalore" onClick={hideSideBar}>
                       X-Ray
                     </Link>
                     {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
                   </li>
                   <li id="resp-cardiology">
                     <span>
-                      <Link href="/cardiology-test" onClick={hideSideBar}>
+                      <Link
+                        href="/cardiology-test-in-bangalore"
+                        onClick={hideSideBar}
+                      >
                         Cardiology
                       </Link>
                       <IoIosArrowDown
@@ -293,29 +303,47 @@ export default function Menu() {
                     <div className="resp-subMenu" ref={subDropRef}>
                       <ul>
                         <li>
-                          <Link href="/ecg-test" onClick={hideSideBar}>
+                          <Link
+                            href="/ecg-test-in-bangalore"
+                            onClick={hideSideBar}
+                          >
                             ECG
                           </Link>
                         </li>
                         <li>
-                          <Link href="/echo-test" onClick={hideSideBar}>
+                          <Link
+                            href="/echo-test-in-bangalore"
+                            onClick={hideSideBar}
+                          >
                             ECHO
                           </Link>
                         </li>
                         <li>
-                          <Link href="/tmt-test" onClick={hideSideBar}>
+                          <Link
+                            href="/tmt-test-in-bangalore"
+                            onClick={hideSideBar}
+                          >
                             TMT
                           </Link>
                         </li>
                       </ul>
                     </div>
                   </li>
+                  <li>
+                    <Link
+                      href="/radiological-procedures-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Radiological Procedures
+                    </Link>
+                    {/* <MdKeyboardArrowRight className="menuDrop-arrowIco" /> */}
+                  </li>
                 </ul>
               </div>
             </li>
             <li>
               {" "}
-              <Link href="/health-packages" onClick={hideSideBar}>
+              <Link href="/health-packages-in-bangalore" onClick={hideSideBar}>
                 Health Packages
               </Link>
             </li>
