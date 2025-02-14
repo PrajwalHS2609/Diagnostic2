@@ -5,6 +5,16 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import neurologist from "@/Images/Consultation/neuro.png"
+export const metadata = {
+  title: "Neurology Consultant in Bangalore | Cardiologist near Me",
+  description:
+    "Neurology Consultant in Bangalore is essential for individuals dealing with neurological disorders, as these conditions require expert care and accurate diagnosis.",
+  canonical: "https://diagnosticscenter.co.in/neurology-consultant-in-bangalore",
+  keywords: [
+    "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
+  ],
+};
 export default function NeurologistConsultation() {
   return (
     <div className="page-container">

@@ -194,7 +194,7 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <Link href="/neurology-consultant-in-bangalore">
+                <Link href="/neurology-consultation-in-bangalore">
                   Neurology
                 </Link>
               </li>
