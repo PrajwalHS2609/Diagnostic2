@@ -11,10 +11,10 @@ import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimoni
 import CardiologyCard from "@/components/Services/Cardiology/CardiologyCard";
 
 export const metadata = {
-  title: "Diabetologist Consultant in Bangalore | Diabetologist near Me",
+  title: "Cardiology Services in Bangalore | Diabetologist near Me",
   description:
-    "Diabetologist Consultant in Bangalore is crucial for individuals seeking specialized care for diabetes management. Book an Appointment! ",
-  canonical: "https://diagnosticscenter.co.in/diabetologist-consultant-in-bangalore",
+  "Cardiology Services in Bangalore is a crucial role in diagnosing and treating various conditions related to the female reproductive system. ",
+  canonical: "https://diagnosticscenter.co.in/cardiology-test-in-bangalore",
   keywords: [
     "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
     "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",

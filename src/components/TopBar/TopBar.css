@@ -61,12 +61,13 @@
   height: 100%;
   width: 100%;
   text-align: center;
+  font-size: 15px;
 }
 .topBar-container > span > p {
   height: 100%;
   width: 100%;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: white !important;
 }
@@ -75,8 +76,12 @@
     /* border: solid red; */
     flex-direction: column;
   }
+  .topBar-container > span > b {
+    color: white;
+  }
   .topBar-container > span > p {
     text-align: center;
+    color: red !important;
   }
   .topBar-content > a:nth-child(2) {
     display: none;

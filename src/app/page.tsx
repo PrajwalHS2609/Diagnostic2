@@ -7,6 +7,8 @@ import HomeServices from "@/components/HomePage/HomeServices/HomeServices";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeSubServices from "@/components/HomePage/HomeBlog/HomeBlog";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
+import HomeContentHead from "@/components/HomePage/HomeContentHead";
+import HomeContentFooter from "@/components/HomePage/HomeContentFooter";
 export const metadata = {
   title: "Diagnostics Services in Bangalore | Best Diagnostics Near Me",
   description:
@@ -21,6 +23,7 @@ export default function Home() {
   return (
     <div className="page-container">
       <HomeHeader />
+      <HomeContentHead />
       <HomeServices />
       <HomeAboutUs />
       <HomeWhy />
@@ -28,6 +31,7 @@ export default function Home() {
       <HomeDoctor />
       <HomeTestimonial />
       <HomeSubServices />
+      <HomeContentFooter />
     </div>
   );
 }
