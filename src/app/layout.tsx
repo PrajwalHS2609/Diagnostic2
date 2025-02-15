@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import "./globals.css";
 import TopBar from "@/components/TopBar/Topbar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,12 +19,27 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QBFT7KMNVD"
+        ></script>
+        <script>
+          {`  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QBFT7KMNVD');`}
+        </script>
+        <meta
+          name="google-site-verification"
+          content="vHkIWmlfT3TV57tK_HQnazui3gfTTDRLLKBrkUTUaUE"
+        />
       </head>
       <body>
         <TopBar />
         <Navbar />
         {children}
-        <BookPopUp/>
+        <BookPopUp />
         <Footer />
       </body>
     </html>
