@@ -100,7 +100,10 @@
   }
   .homeHeader-coverContent > span > a > button {
     font-weight: 600;
-    border-radius: 10px;
+    border-radius:20px;
+  }
+  .homeHeader-coverContent > span {
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {

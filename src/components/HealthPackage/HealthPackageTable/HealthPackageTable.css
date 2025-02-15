@@ -1,0 +1,98 @@
+/* 
+
+.healthPackageTable {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  background: var(--customColor3);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid var(--customColor3);
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--customColor1);
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: var(--customColor3);
+}
+
+tr:hover {
+  background-color: var(--customColor1);
+  color: white;
+}
+
+td[colspan] {
+  font-weight: bold;
+  background: var(--customColor2);
+  color: white;
+}
+
+td:last-child {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+} */
+.healthPackageTable {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--customColor1), var(--customColor2));
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 14px;
+  text-align: center;
+  color: white;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--customColor2);
+  font-weight: bold;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+td[colspan] {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--customColor2);
+}

@@ -8,11 +8,11 @@ import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimoni
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import cardiology from "@/Images/Consultation/cardio.png";
 export const metadata = {
-  title: "Gynaecologist Consultant in Bangalore | Gynaecologist near Me",
+  title: "Cardiologist Consultant in Bangalore | Cardiologist near Me",
   description:
-    "Gynaecologist Consultant in Bangalore is a crucial role in diagnosing and treating various conditions related to the female reproductive system. ",
+    "Cardiologist Consultant in Bangalore is a crucial role in diagnosing and treating various conditions related to the female reproductive system. ",
   canonical:
-    "https://diagnosticscenter.co.in/gynaecologist-consultant-in-bangalore",
+    "https://diagnosticscenter.co.in/cardiologist-consultant-in-bangalore",
   keywords: [
     "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
     "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "@/components/Style/style.css"
 const CardiologyContentFooter = () => {
   return (
     <div className="consultationContent-container">
