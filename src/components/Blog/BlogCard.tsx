@@ -38,7 +38,7 @@ const BlogCard = () => {
             />
           </div>
           <div className="blogCard-txtContent">
-            <h4>{x.title}</h4>
+            <Link href={x.link}><h4>{x.title}</h4></Link>
             <p>
              {x.description}
             </p>

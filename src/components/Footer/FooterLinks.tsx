@@ -11,16 +11,13 @@ const FooterLinks = () => {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">Services</Link>
+          <Link href="/about-us">About Us</Link>
         </li>
         <li>
-          <Link href="/">About Us</Link>
+          <Link href="/contact Us">Contact Us</Link>
         </li>
         <li>
-          <Link href="/">Consultation</Link>
-        </li>
-        <li>
-          <Link href="/">Contact Us</Link>
+          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </div>

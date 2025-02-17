@@ -4,6 +4,8 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
+import TmtContentFooter from "@/components/Services/Tmt/TmtContentFooter";
+import TmtContentHead from "@/components/Services/Tmt/TmtContentHead";
 import tmt1 from "@/Images/tmt/tmt1.png";
 import tmt2 from "@/Images/tmt/tmt2.png";
 import tmt3 from "@/Images/tmt/tmt3.png";
@@ -30,11 +32,13 @@ export default function TMTTest() {
         para="Accurate insights to keep your health moving forward"
         bread="TMT Test"
       />
+      <TmtContentHead/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
       <HomeWhy />
+      <TmtContentFooter/>
     </div>
   );
 }

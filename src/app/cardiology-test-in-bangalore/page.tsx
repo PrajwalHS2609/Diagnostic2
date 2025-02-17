@@ -9,6 +9,8 @@ import cardiology2 from "@/Images/cardiology/cardiology2.png";
 import cardiology3 from "@/Images/cardiology/cardiology3.png";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import CardiologyCard from "@/components/Services/Cardiology/CardiologyCard";
+import CardiologyContentHeader from "@/components/Consultation/CardiologyConsultation/CardiologyContentHeader";
+import CardiologyContentFooter from "@/components/Consultation/CardiologyConsultation/CardiologyContentFooter";
 
 export const metadata = {
   title: "Cardiology Services in Bangalore | Diabetologist near Me",
@@ -33,13 +35,14 @@ const page = () => {
         para="Creating Life's masterpiece, one kick at a time"
         bread="Cardiology "
       />
+      <CardiologyContentHeader/>
       <CardiologyCard/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial/>
-
       <HomeWhy />
+      <CardiologyContentFooter/>
     </div>
   );
 };

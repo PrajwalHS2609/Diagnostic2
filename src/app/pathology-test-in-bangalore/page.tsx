@@ -5,6 +5,8 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import PathologyCard from "@/components/Services/Pathology/PathologyCard";
+import PathologyContentFooter from "@/components/Services/Pathology/PathologyContentFooter";
+import PathologyContentHead from "@/components/Services/Pathology/PathologyContentHead";
 import pathalogy1 from "@/Images/pathalogy/pathalogy1.png";
 import pathalogy2 from "@/Images/pathalogy/pathalogy2.png";
 import pathalogy3 from "@/Images/pathalogy/pathalogy3.png";
@@ -15,7 +17,7 @@ export const metadata = {
   canonical: "https://diagnosticscenter.co.in/pathology-test-in-bangalore",
   keywords: [
     "Diagnostic Center,Medical Testing,Pathology Lab Health Checkup,Laboratory Services Medical Diagnosis",
-    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,"
+    "Ultrasound Testing,ECG Test,Blood Test,X-ray Services,MRI Scan,Echo Scan ,",
   ],
 };
 export default function Pathology() {
@@ -31,13 +33,14 @@ export default function Pathology() {
         para="Discover the Convenience of a Healthier Life with our Premium Service"
         bread="Pathology"
       />
+      <PathologyContentHead />
       <PathologyCard />
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
-
       <HomeWhy />
+      <PathologyContentFooter />
     </div>
   );
 }

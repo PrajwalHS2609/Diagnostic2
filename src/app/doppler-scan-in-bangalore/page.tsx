@@ -8,6 +8,8 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import doppler1 from "@/Images/doppler/doppler1.png";
 import doppler2 from "@/Images/doppler/doppler2.png";
 import doppler3 from "@/Images/doppler/doppler3.png";
+import DopplerContentHead from "@/components/Services/Doppler/DopplerContentHead";
+import DopplerContentFooter from "@/components/Services/Doppler/DopplerContentFooter";
 export const metadata = {
   title: "Doppler Scanning in Bangalore | Best Doppler Scans Near Me",
   description:
@@ -31,12 +33,14 @@ export default function DopplerScan() {
         para="Accurate insights to keep your health moving forward"
         bread="Doppler Scan"
       />
+      <DopplerContentHead/>
       <DopplerCard/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
       <HomeWhy />
+      <DopplerContentFooter/>
     </div>
   );
 }

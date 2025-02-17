@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
+
 import "./ConsultationHeader.css";
 import Image from "next/image";
 import Link from "next/link";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 
 interface HeaderProps {
   imageSrc: string;
@@ -17,16 +20,17 @@ const ConsultationHeader = ({
   title,
   highlight,
   para,
+  bread
 }: HeaderProps) => {
 
-//   const handleAppointment = () => {
-//     const bookPopUpElement = document.querySelector(".bookPopUp");
-//     if (bookPopUpElement) {
-//       (bookPopUpElement as HTMLElement).style.visibility = "visible";
-//     } else {
-//       console.warn("Element with class 'bookPopUp' not found");
-//     }
-//   };
+  const handleAppointment = () => {
+    const bookPopUpElement = document.querySelector(".bookPopUp");
+    if (bookPopUpElement) {
+      (bookPopUpElement as HTMLElement).style.visibility = "visible";
+    } else {
+      console.warn("Element with class 'bookPopUp' not found");
+    }
+  };
   return (
     <div className="consultation-headerContainer">
       <Image src={imageSrc} alt={alt} width={1000} height={1000}/>
@@ -40,13 +44,22 @@ const ConsultationHeader = ({
           <Link href="">
             <button
               className="headerComponent-btn2"
-            //   onClick={handleAppointment}
+              onClick={handleAppointment}
             >
               Book Appointment Now
             </button>
           </Link>
         </span>
       </div>
+      <span>
+          <h5>
+            <Link href="/">Home</Link>
+          </h5>
+          <h5>
+            <MdOutlineDoubleArrow />
+          </h5>
+          <h5>{bread}</h5>
+        </span>
     </div>
   );
 };

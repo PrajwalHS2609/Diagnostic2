@@ -67,7 +67,10 @@
   border-radius: 30px;
   color: white;
 }
+.consultation-headerContainer>span{
+  border: solid yellow;
 
+}
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .consultation-headerContainer {
     /* border: solid red; */

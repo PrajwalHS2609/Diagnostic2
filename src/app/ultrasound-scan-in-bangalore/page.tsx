@@ -5,6 +5,8 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import UltrasoundCard from "@/components/Services/Ultrasound/UltrasoundCard";
+import UltrasoundContentFooter from "@/components/Services/Ultrasound/UltrasoundContentFooter";
+import UltrasoundContentHead from "@/components/Services/Ultrasound/UltrasoundContentHead";
 import ultraSound1 from "@/Images/ultrasound/ultrasound1.png"
 import ultraSound2 from "@/Images/ultrasound/ultrasound2.png"
 import ultraSound3 from "@/Images/ultrasound/ultrasound3.png"
@@ -31,13 +33,14 @@ export default function UltrasoundScan() {
         para="Creating Life's masterpiece, one kick at a time"
         bread="Ultrasound Scan"
       />
+      <UltrasoundContentHead/>
       <UltrasoundCard/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial/>
-
       <HomeWhy />
+      <UltrasoundContentFooter/>
     </div>
   );
 }

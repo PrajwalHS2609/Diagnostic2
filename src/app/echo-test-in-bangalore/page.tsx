@@ -9,6 +9,8 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import echo1 from "@/Images/echo/echo1.png";
 import echo2 from "@/Images/echo/echo2.png";
 import echo3 from "@/Images/echo/echo3.png";
+import EchoContentHead from "@/components/Services/Echo/EchoContentHead";
+import EchoContentFooter from "@/components/Services/Echo/EchoContentFooter";
 export const metadata = {
   title: "ECHO Test in Bangalore | Best ECHO Tests Near Me",
   description:
@@ -32,12 +34,14 @@ export default function EchoTest() {
         para="Accurate insights to keep your health moving forward"
         bread="Echo Test"
       />
+      <EchoContentHead/>
       <EchoCard/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
       <HomeWhy />
+      <EchoContentFooter/>
     </div>
   );
 }

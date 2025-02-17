@@ -5,6 +5,8 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import XrayCard from "@/components/Services/Xray/XrayCard";
+import XrayContentFooter from "@/components/Services/Xray/XrayContentFooter";
+import XrayContentHead from "@/components/Services/Xray/XrayContentHead";
 import xray1 from "@/Images/xray/x-ray1.png";
 import xray2 from "@/Images/xray/x-ray2.png";
 import xray3 from "@/Images/xray/x-ray3.png";
@@ -31,12 +33,14 @@ export default function UltrasoundScan() {
         para="Creating Life's masterpiece, one kick at a time"
         bread="X-Ray"
       />
+      <XrayContentHead/>
       <XrayCard />
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
       <HomeWhy />
+      <XrayContentFooter/>
     </div>
   );
 }

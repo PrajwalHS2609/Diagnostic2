@@ -39,13 +39,16 @@
   position: relative;
   overflow: hidden;
 }
-.blogCard-txtContent > h4 {
+
+.blogCard-txtContent > a {
+  color: black;
+}
+.blogCard-txtContent > a > h4 {
   font-weight: 600;
   transition: 300ms ease-in-out;
-
-  &:hover {
-    color: var(--customColor1);
-  }
+}
+.blogCard-content:hover .blogCard-txtContent > a > h4 {
+  color: var(--customColor1);
 }
 .blogCard-txtContent > p {
   text-align: justify;

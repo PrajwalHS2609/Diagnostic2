@@ -4,6 +4,8 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
+import EcgContentFooter from "@/components/Services/Ecg/EcgContentFooter";
+import EcgContentHead from "@/components/Services/Ecg/EcgContentHead";
 import ecg1 from "@/Images/ecg/ecg1.png";
 import ecg2 from "@/Images/ecg/ecg2.png";
 import ecg3 from "@/Images/ecg/ecg3.png";
@@ -30,11 +32,13 @@ export default function ECGTest() {
         para="Accurate insights to keep your health moving forward"
         bread="ECG Test"
       />
+      <EcgContentHead/>
       <HomeAboutUs />
       <HomeKey />
       <HomeDoctor />
       <HomeTestimonial />
       <HomeWhy />
+      <EcgContentFooter/>
     </div>
   );
 }
