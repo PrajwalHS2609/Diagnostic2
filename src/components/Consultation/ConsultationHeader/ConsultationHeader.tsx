@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 
 import "./ConsultationHeader.css";
@@ -20,9 +20,8 @@ const ConsultationHeader = ({
   title,
   highlight,
   para,
-  bread
+  bread,
 }: HeaderProps) => {
-
   const handleAppointment = () => {
     const bookPopUpElement = document.querySelector(".bookPopUp");
     if (bookPopUpElement) {
@@ -33,9 +32,12 @@ const ConsultationHeader = ({
   };
   return (
     <div className="consultation-headerContainer">
-      <Image src={imageSrc} alt={alt} width={1000} height={1000}/>
+      <Image src={imageSrc} alt={alt} width={1000} height={1000} />
       <div className="consultation-headerContents">
-        <h2><span>{highlight}</span>{title}</h2>
+        <h2>
+          <span>{highlight}</span>
+          {title}
+        </h2>
         <p>{para}</p>
         <span>
           <Link href="/contact-us">
@@ -50,8 +52,7 @@ const ConsultationHeader = ({
             </button>
           </Link>
         </span>
-      </div>
-      <span>
+        <div className="headerConsultation-bread">
           <h5>
             <Link href="/">Home</Link>
           </h5>
@@ -59,7 +60,8 @@ const ConsultationHeader = ({
             <MdOutlineDoubleArrow />
           </h5>
           <h5>{bread}</h5>
-        </span>
+        </div>
+      </div>
     </div>
   );
 };

@@ -361,7 +361,7 @@ export default function Menu() {
                 <ul>
                   <li>
                     <Link
-                      href="/diabetologist-consultation-in-bangalore"
+                      href="/diabetologist-consultant-in-bangalore"
                       onClick={hideSideBar}
                     >
                       Diabetologist
@@ -369,10 +369,50 @@ export default function Menu() {
                   </li>
                   <li>
                     <Link
-                      href="/gynecologist-consultation-in-bangalore"
+                      href="/gynaecologist-consultant-in-bangalore"
                       onClick={hideSideBar}
                     >
                       Gynaecologist
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/cardiologist-consultant-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Cardiologist
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/neurology-consultation-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Neurology
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/obstetrics-consultation-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Obstetrics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/gastroenterology-consultation-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Gastroenterology
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/urology-consultation-in-bangalore"
+                      onClick={hideSideBar}
+                    >
+                      Urology
                     </Link>
                   </li>
                 </ul>

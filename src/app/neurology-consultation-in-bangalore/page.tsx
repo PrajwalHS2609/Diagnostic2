@@ -24,7 +24,7 @@ export default function NeurologistConsultation() {
         title="Consultation in Bangalore"
         highlight="Neurology "
         para="Creating Life's masterpiece, one kick at a time"
-        bread="Neurology Consultation "
+        bread="Neurology"
       />
       <HomeAboutUs />
       <HomeKey />

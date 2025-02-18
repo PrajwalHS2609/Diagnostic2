@@ -3,7 +3,7 @@ import "./Footer.css";
 import FooterAddress from "./FooterAddress";
 import FooterLinks from "./FooterLinks";
 import FooterService from "./FooterService";
-import FooterPost from "./FooterPost";
+import FooterConsultation from "./FooterConsultation";
 
 const TopFooter = () => {
   return (
@@ -13,7 +13,7 @@ const TopFooter = () => {
         {" "}
         <FooterLinks />
         <FooterService />
-        <FooterPost />
+        <FooterConsultation />
       </div>
     </div>
   );
