@@ -99,7 +99,7 @@
     background-color: var(--customColor2);
   }
   .consultation-headerContents > h2 > span {
-  font-size: 40px;
+    font-size: 40px;
   }
   .consultation-headerContents > h2 {
     color: white;
@@ -110,6 +110,6 @@
     padding: 20px;
   }
   .consultation-headerContents > span {
-flex-direction: column;
+    flex-direction: column;
   }
 }
