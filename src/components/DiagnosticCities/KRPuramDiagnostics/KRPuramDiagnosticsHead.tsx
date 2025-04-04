@@ -4,7 +4,7 @@ import "@/components/Style/style.css";
 const KRPuramDiagnosticsHead = () => {
   return (
     <div className="diagnosticsHead-container">
-      <h1></h1>
+      <h1>Diagnostics Center in KR Puram</h1>
       <p>
         Diagnostics Center in KR Puram is the preferred choice for individuals
         seeking high-quality diagnostic services in the area. With advanced
