@@ -4,7 +4,7 @@ import "./Footer.css";
 const BottomFooter = () => {
   return (
     <div className='bottomFooter-container'>
-      <h6>Copyright © 2025 Diagnostic2 , All Rights Reserved.</h6>
+      <h6>Copyright © 2025 diagnosticscenter.co.in , All Rights Reserved.</h6>
     </div>
   )
 }
