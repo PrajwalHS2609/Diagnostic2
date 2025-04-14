@@ -184,3 +184,15 @@
     gap: 10px;
   }
 }
+@media screen and (min-width:1000px) and (max-width:1200px){
+  .homeWhyMain-content:nth-child(1) {
+    width: 100%;
+  }
+  .homeWhyMain-content:nth-child(2) {
+    width: 100%;
+  }
+  .homeWhyMain-container {
+    /* border: solid red; */
+    background-position-x: 0px;
+  }
+}

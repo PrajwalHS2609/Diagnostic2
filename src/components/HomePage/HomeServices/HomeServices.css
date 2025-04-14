@@ -183,3 +183,10 @@
     height: 100%;
   }
 }
+@media screen and (min-width:1000px) and (max-width:1200px){
+  .homeServicesHead-content {
+    width: 50%;
+    padding: 10px;
+  }
+}
+

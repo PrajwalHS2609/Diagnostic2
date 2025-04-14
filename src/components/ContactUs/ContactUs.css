@@ -436,3 +436,32 @@
     font-weight: bold;
   }
 }
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .contactUs-formContainer {
+    /* border: solid red; */
+    width: 100%;
+  }
+  .contactUs-formContent {
+    /* border: solid blue; */
+    width: 100%;
+  }
+  .contactUs-formItem1{
+    flex-direction: column;
+  }
+  .contactUs-formItem1 > input {
+    /* border: solid green; */
+    width: 100%;
+  }
+  .contactUs-formItem2{
+    width: 100%;
+    padding: 20px;
+  }
+  .contactUs-formItem2 > input {
+    /* border: solid green; */
+    width: 100%;
+  }
+  .contactUs-formItem2 > textarea {
+    /* border: solid green; */
+    width: 100%;
+  }
+}
