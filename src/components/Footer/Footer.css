@@ -133,6 +133,9 @@
   padding: 0;
   gap: 20px;
 }
+.footerList-container > ul > li{
+  list-style: none;
+}
 .footerList-container > ul > li > a {
   color: white;
   text-decoration: none;

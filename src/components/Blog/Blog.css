@@ -25,14 +25,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .blogCard-txtContent {
   border: 1px solid grey;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+  border-radius: 10px;
   width: 100%;
   height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: column;
   padding: 10px;
@@ -57,12 +62,14 @@
   text-decoration: none;
 }
 .blogCard-txtContent > a > button {
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   color: grey;
   font-weight: 500;
   transition: 300ms ease-in-out;
+  background-color: white;
   &:hover {
     color: var(--customColor1);
   }
@@ -95,4 +102,279 @@
 .blogCard-content:hover .blogCard-design {
   transform: translate(0px, 0px);
   opacity: 1;
+}
+.blog-container {
+  /* border: solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.blog-wrapper1 {
+  /* border: solid blue; */
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.blog-wrapper1 > img {
+  width: 100%;
+  height: 500px;
+}
+.blog-wrapper1 > h1 {
+  text-align: center;
+  color: var(--customColor1);
+}
+.blog-wrapper1 > h2 {
+  text-align: start;
+}
+.blogHead-content > ul > li > a {
+  text-decoration: none;
+  color: var(--customColor1);
+}
+.blog-wrapper2 {
+  /* border: solid red; */
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.blogHead-content {
+  /* border: solid blue; */
+  width: 100% !important;
+  padding: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.blogHead-content > h1 {
+  color: var(--customColor1);
+  text-align: center;
+}
+.blogHead-content > h2 {
+  font-size: 30px;
+  color: var(--customColor1);
+  text-align: center;
+}
+.blogHead-content > h3 {
+  font-size: 25px;
+  color: var(--customColor1);
+  text-align: start;
+  width: 100%;
+}
+.blogHead-content > h5 {
+  font-size: 25px;
+  color: var(--customColor1);
+  text-align: start;
+  width: 100%;
+}
+.blogHead-content > p {
+  width: 100%;
+  font-size: 20px;
+  text-align: justify;
+}
+.blogHead-content > p > a {
+  text-decoration: none;
+  color: var(--customColor1);
+}
+/* .blogHead-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  } */
+.blogHead-content > p {
+  font-size: 20px;
+  width: 100%;
+  text-align: justify;
+}
+.blogHead-content > p > span {
+  color: var(--customColor1);
+  font-size: 20px;
+  font-weight: bold;
+}
+.blogHead-content > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.blogHead-content > ul > h4 {
+  font-size: 22px;
+  color: var(--customColor1);
+  text-align: start;
+  width: 100%;
+}
+.blogHead-content > ul > p {
+  font-size: 20px;
+  width: 100%;
+  text-align: justify;
+}
+.blogHead-content > ul > li {
+  font-size: 20px;
+  margin: 10px;
+  list-style: none;
+}
+.blogHead-content > ul > li > p {
+  text-align: justify;
+}
+.blogHead-content > ul > li > span {
+  color: var(--customColor1);
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.blogHead-content > ul > li > span > img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .blogHead-content {
+    /* border: solid blue; */
+    padding: 10px !important;
+  }
+  .blogHead-content > h1 {
+    font-size: 25px;
+    color: var(--customColor1);
+    text-align: center;
+  }
+  .blogHead-content > h3 {
+    text-align: center;
+  }
+  .blogHead-content > h5 {
+    text-align: center;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+.blogSideBar-container {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.blogCategories-container {
+  /* border: solid green; */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.blogCategories-container > ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.blogCategories-container > ul > h2 {
+  color: var(--customColor1);
+}
+.blogCategories-container > ul > li {
+  border-bottom: solid var(--customColor1) 1px;
+  width: 100%;
+  list-style: none;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+.blogCategories-container > ul > li > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+.blogCategories-container > ul > li:hover a {
+  color: var(--customColor1);
+}
+
+.blogPost-container {
+  /* border: solid blue; */
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.blogPost-container > ul > h2 {
+  color: var(--customColor1);
+}
+.blogPost-container > ul {
+  /* border: solid; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.blogPost-container > ul > a {
+  text-decoration: none;
+  color: black;
+}
+.blogPost-container > ul > a > ul {
+  /* border: solid green; */
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  width: 100%;
+}
+.blogPost-container > ul > a > ul > li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 10px 10px grey;
+  }
+}
+.blogPost-container > ul > a > ul > li:hover h4 {
+  color: var(--customColor1);
+}
+.blogPost-container > ul > a > ul > li > h4 {
+  text-align: justify;
+  font-size: 15px;
+}
+.blogPostImg-content {
+  width: 100px;
+  height: 100px;
+}
+.blogPost-container > ul > a > ul > li > img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }

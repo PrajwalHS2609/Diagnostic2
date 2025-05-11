@@ -12,6 +12,7 @@ import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import HomeHeader from "@/components/HomePage/HomeHeader/HomeHeader";
+import BlogSidebar from "@/components/Blog/BlogSidebar/BlogSidebar";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   _id,
@@ -95,21 +96,16 @@ export default async function SlugPage({
         ) : isPost ? (
           <p className="image-fallback">Image not available</p>
         ) : null}
-
-        {/* HeaderComponent for service content */}
-        {!isPost && imageUrl}
-        <HomeHeader />
+        {!isPost && (
+          <>
+            <HomeHeader />
+          </>
+        )}
         <div
           className={isPost ? "blogHead-content" : "diagnosticsHead-container"}
         >
-          <h1
-            className={
-              isPost ? "blogHead-content" : "head-container"
-            }
-          >
-            {content.title}
-          </h1>
           <div className={isPost ? "blogHead-content" : "Head-container"}>
+            <h1>{content.title}</h1>
             {/* Render body only for posts */}
             {isPost && Array.isArray(content.body) && (
               <PortableText value={content.body} />
@@ -137,7 +133,11 @@ export default async function SlugPage({
         </div>
       </div>
 
-      {isPost && <div className="blog-wrapper2">{/* <BlogSidebar /> */}</div>}
+      {isPost && (
+        <div className="blog-wrapper2">
+          <BlogSidebar />
+        </div>
+      )}
     </div>
   );
 }
