@@ -62,13 +62,13 @@ const HeaderComponent = ({
           modules={[EffectCube, Pagination, Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
+          <SwiperSlide className="mySwiper-img">
             <Image src={imageSrc1} alt={alt} width={1000} height={1000} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="mySwiper-img">
             <Image src={imageSrc2} alt={alt} width={1000} height={1000} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="mySwiper-img">
             <Image src={imageSrc3} alt={alt} width={1000} height={1000} />
           </SwiperSlide>
         </Swiper>

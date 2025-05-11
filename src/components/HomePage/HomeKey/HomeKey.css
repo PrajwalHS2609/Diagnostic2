@@ -17,7 +17,7 @@
   border-radius: 20px;
 }
 .homeKey-item {
-  /* border: solid red; */
+  border: solid red;
   border-right: solid 1px grey;
   display: flex;
   justify-content: center;
@@ -27,12 +27,13 @@
   padding: 30px;
   width: 300px;
 }
-.homeKey-item:nth-child(4) {
+.homeKey-item {
   border: none;
 }
+
 .homeKey-item > h2 {
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
 .homeKey-item > p {
   color: white;
@@ -48,6 +49,11 @@
   padding: 10px;
   border-radius: 100%;
   transition: 300ms ease-in-out;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .homeKey-item:hover .keyPoint-icon {
   color: white;

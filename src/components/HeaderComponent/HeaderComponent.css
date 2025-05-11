@@ -9,6 +9,7 @@
   flex-direction: row-reverse;
 }
 .headerComponent-imgContainer {
+  /* border: solid red; */
   width: 50%;
   height: 100%;
   display: flex;
@@ -82,6 +83,7 @@
   border: solid var(--customColor2);
   padding: 10px;
   border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.471);
 }
 .carousel {
   width: 100%;
@@ -92,6 +94,21 @@
   width: 400px;
   height: 400px;
   overflow: hidden;
+}
+.mySwiper > img {
+  /* border: solid blue; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mySwiper-img {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .headerComponent-container {
@@ -113,7 +130,7 @@
     flex-direction: column;
     padding: 50px;
   }
-  .headerComponent-coverContent>span{
+  .headerComponent-coverContent > span {
     flex-direction: column;
   }
   .headerComponent-coverContent > h2 {

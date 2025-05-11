@@ -98,7 +98,20 @@
   margin-bottom: 20px;
   color: var(--customColor2);
 }
-
+.diagnosticsHead-container h2 {
+  color: var(--customColor2);
+  text-align: start;
+}
+.diagnosticsHead-container h3 {
+  color: var(--customColor2);
+  text-align: start;
+}
+.diagnosticsHead-container > p > strong {
+  color: var(--customColor2);
+}
+.diagnosticsHead-container > ul > li > strong {
+  color: var(--customColor2);
+}
 .diagnosticsHead-container p {
   font-size: 16px;
   text-align: justify;

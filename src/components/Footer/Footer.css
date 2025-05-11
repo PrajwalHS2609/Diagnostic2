@@ -75,7 +75,9 @@
   padding: 10px;
 }
 .footerAddress-container > span > img {
-  width: 70px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 }
 .footerAddress-socialContainer {
   width: 100%;
