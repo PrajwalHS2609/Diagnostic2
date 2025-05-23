@@ -19,6 +19,11 @@ const FooterLinks = () => {
         <li>
           <Link href="/blog">Blog</Link>
         </li>
+        <li>
+          <Link href="/other-services" style={{ color: "#002261" }}>
+            OtherServices
+          </Link>
+        </li>
       </ul>
     </div>
   );
