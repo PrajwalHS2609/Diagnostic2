@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import BookPopUp from "@/components/BookPopUp/BookPopUp";
+import PopupAd from "@/components/PopupAd/PopupAd";
 
 export default function RootLayout({
   children,
@@ -38,6 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <PopupAd/>
         <TopBar />
         <Navbar />
         {children}

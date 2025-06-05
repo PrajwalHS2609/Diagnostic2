@@ -3,6 +3,7 @@ import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 import Image from "next/image";
 import "@/components/Blog/Blog.css";
+export const revalidate = 0;
 
 const POSTS_QUERY = `*[
   _type == "post" && defined(slug.current)

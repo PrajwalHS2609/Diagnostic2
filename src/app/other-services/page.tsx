@@ -15,6 +15,7 @@ const SERVICE_QUERY = `*[_type == "ServiceCategory"][0...100]{
   title,
   slug,
 }`;
+export const revalidate = 0;
 
 export default async function OtherServices() {
   const services = await client.fetch<Service[]>(SERVICE_QUERY);

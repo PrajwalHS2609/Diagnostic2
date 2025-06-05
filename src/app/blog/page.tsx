@@ -1,6 +1,10 @@
 import BlogCard from "@/components/Blog/BlogCard";
 import ConsultationHeader from "@/components/Consultation/ConsultationHeader/ConsultationHeader";
 import blogBanner from "@/Images/BlogBanner.png";
+
+export const revalidate = 0;
+
+
 export default function Blog() {
   return (
     <div className="page-container">

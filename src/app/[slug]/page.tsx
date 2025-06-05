@@ -14,6 +14,8 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import HomeHeader from "@/components/HomePage/HomeHeader/HomeHeader";
 import BlogSidebar from "@/components/Blog/BlogSidebar/BlogSidebar";
 
+export const revalidate = 0;
+
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   _id,
   title,
@@ -118,10 +120,10 @@ export default async function SlugPage({
         {!isPost && Array.isArray(content.body1) && (
           <>
             <HomeAboutUs />
-            <HomeKey />
+            <HomeWhy />
             <HomeDoctor />
             <HomeTestimonial />
-            <HomeWhy />
+            <HomeKey />
           </>
         )}
         <div

@@ -31,10 +31,10 @@ export default function CardiologistConsultation() {
       />
       <CardiologyContentHeader />
       <HomeAboutUs />
-      <HomeKey />
+      <HomeWhy />
       <HomeDoctor />
       <HomeTestimonial />
-      <HomeWhy />
+      <HomeKey />
       <CardiologyContentFooter />
     </div>
   );
