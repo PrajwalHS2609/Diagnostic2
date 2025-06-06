@@ -11,9 +11,9 @@ import HomeKey from "@/components/HomePage/HomeKey/HomeKey";
 import HomeDoctor from "@/components/HomePage/HomeDoctor/HomeDoctor";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
-import HomeHeader from "@/components/HomePage/HomeHeader/HomeHeader";
 import BlogSidebar from "@/components/Blog/BlogSidebar/BlogSidebar";
-
+import ConsultationHeader from "@/components/Consultation/ConsultationHeader/ConsultationHeader";
+import sanityServiceBanner from "@/Images/sanityServiceBanner.png";
 export const revalidate = 0;
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
@@ -100,7 +100,14 @@ export default async function SlugPage({
         ) : null}
         {!isPost && (
           <>
-            <HomeHeader />
+            <ConsultationHeader
+              imageSrc={sanityServiceBanner.src}
+              alt="sanity Service Banner"
+              title={content.title}
+              highlight=" "
+              para=""
+              bread={content.title}
+            />
           </>
         )}
         <div
