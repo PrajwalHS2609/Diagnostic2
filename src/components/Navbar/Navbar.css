@@ -90,11 +90,13 @@
   font-weight: 500;
   position: relative;
 }
-
-.menu-content1 > li > a:hover {
-  color: var(--customColor2);
+.menu-content1 > li:hover {
+  color: var(--customColor1);
 }
-
+.menu-content1 > li > a:hover {
+  color: var(--customColor1);
+}
+/* 
 .menu-content1 > li > a::after {
   content: "";
   border: solid 1px var(--customColor2);
@@ -104,7 +106,7 @@
   width: 0%;
   opacity: 0;
   transition: 300ms ease-in-out;
-}
+} */
 
 .menu-content1 > li > a:hover::after {
   width: 100%;
@@ -117,8 +119,8 @@
 }
 
 .menuDrop-container {
-  /* border: solid red; */
-  border-radius: 10px;
+  border-top: solid var(--customColor1);
+  border-radius: 0px;
   box-shadow: 0 0 10px grey;
   position: absolute;
   top: 80px;
@@ -172,10 +174,10 @@
 }
 
 .menuDrop-container > ul > li > a:hover {
-  color: var(--customColor2);
+  color: var(--customColor1);
 }
 
-.menuDrop-container > ul > li > a::after {
+/* .menuDrop-container > ul > li > a::after {
   content: "";
   border: solid 1px var(--customColor2);
   position: absolute;
@@ -184,7 +186,7 @@
   width: 0%;
   opacity: 0;
   transition: 300ms ease-in-out;
-}
+} */
 
 .menuDrop-container > ul > li > a:hover::after {
   width: 100%;
@@ -201,11 +203,11 @@
   transition: 300ms ease-in-out;
 }
 .subMenu-drop {
-  /* border:solid red; */
+  border-top: solid var(--customColor1);
   position: absolute;
   right: -150px;
   background-color: white;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 0 0 10px grey;
   display: flex;
   justify-content: center;
@@ -258,9 +260,9 @@
 }
 
 .subMenu-drop > ul > li > a:hover {
-  color: var(--customColor2);
+  color: var(--customColor1);
 }
-.subMenu-drop > ul > li > a::after {
+/* .subMenu-drop > ul > li > a::after {
   content: "";
   border: solid 1px var(--customColor2);
   position: absolute;
@@ -269,11 +271,30 @@
   width: 0%;
   opacity: 0;
   transition: 300ms ease-in-out;
-}
+} */
 
 .subMenu-drop > ul > li > a:hover::after {
   width: 100%;
   opacity: 1;
+}
+.menu-content1 > li > button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--customColor1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  &:hover {
+    background-color: var(--customColor2);
+  }
+}
+.bookArrow {
+  font-weight: bold;
+  font-size: 25px;
+  transition: 300ms ease;
+}
+.menu-content1 > li > button:hover .bookArrow {
+  transform: translateX(5px);
 }
 /* --------------Responsive Menu----------------------- */
 .menu-content2 {
@@ -568,7 +589,6 @@
   margin-left: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 990px) {
-
   .menu-container {
     /* border: solid; */
     display: flex;

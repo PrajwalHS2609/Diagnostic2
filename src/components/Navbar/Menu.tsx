@@ -6,16 +6,17 @@ import { HiMiniXMark } from "react-icons/hi2";
 import { useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function Menu() {
-  const handleAppointment = () => {
-    const bookPopUpElement = document.querySelector(".bookPopUp");
-    if (bookPopUpElement) {
-      (bookPopUpElement as HTMLElement).style.visibility = "visible";
-    } else {
-      console.warn("Element with class 'bookPopUp' not found");
-    }
-  };
+  // const handleAppointment = () => {
+  //   const bookPopUpElement = document.querySelector(".bookPopUp");
+  //   if (bookPopUpElement) {
+  //     (bookPopUpElement as HTMLElement).style.visibility = "visible";
+  //   } else {
+  //     console.warn("Element with class 'bookPopUp' not found");
+  //   }
+  // };
   const [drop, setDrop] = useState(false);
 
   const dropRef = useRef<HTMLDivElement | null>(null);
@@ -117,6 +118,15 @@ export default function Menu() {
       }
     } else {
       console.error("subDropRef is null or not attached to an element");
+    }
+  };
+
+  const handleAppointment = () => {
+    const bookPopUpElement = document.querySelector(".bookPopUp");
+    if (bookPopUpElement) {
+      (bookPopUpElement as HTMLElement).style.visibility = "visible";
+    } else {
+      console.warn("Element with class 'bookPopUp' not found");
     }
   };
   return (
@@ -222,6 +232,13 @@ export default function Menu() {
         </li>
         <li>
           <Link href="/contact-us">Contact Us</Link>
+        </li>
+
+        <li>
+          <button onClick={handleAppointment}>
+            Book Appointment{" "}
+            <MdKeyboardDoubleArrowRight className="bookArrow" />
+          </button>
         </li>
       </div>
       <div className="menu-content2">
