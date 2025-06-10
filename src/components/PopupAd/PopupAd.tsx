@@ -28,7 +28,7 @@ const PopupAd = () => {
 
       <div className="popup-content">
         <div className="popup-imgContainer">
-          <img src="https://img.freepik.com/free-photo/front-view-smiley-man-showing-thumbs-up_23-2148946231.jpg?uid=R153459844&ga=GA1.1.790794325.1735297516&semt=ais_items_boosted&w=740" alt="" />
+          <img src="https://img.freepik.com/free-photo/doctor-getting-patient-ready-ct-scan_23-2149367401.jpg?uid=R153459844&ga=GA1.1.790794325.1735297516&semt=ais_items_boosted&w=740" alt="" />
         </div>
         <div  className="popup-contentWrapper">
           <h2 className="popup-heading outlined-heading">🚀 BizGen Website Package</h2>
