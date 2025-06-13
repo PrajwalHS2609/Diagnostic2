@@ -5,7 +5,6 @@ import { FaXmark } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
-
 const PopupAd = () => {
   const [showPopup, setShowPopup] = useState(false);
   const pathname = usePathname(); // 👈 detect route

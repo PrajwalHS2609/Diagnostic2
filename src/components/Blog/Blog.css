@@ -239,7 +239,12 @@
   width: 20px;
   height: 20px;
 }
-
+.main-container > h2 {
+  /* border: solid ; */
+  color: var(--customColor1);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .blogHead-content {
     /* border: solid blue; */

@@ -1,0 +1,55 @@
+/* From Uiverse.io by Allyhere */
+.btn-donate {
+  --clr-font-main: hsla(146, 63%, 20%, 1); /* Deep WhatsApp green for font */
+  --btn-bg-1: hsla(145, 63%, 49%, 1); /* WhatsApp primary green */
+  --btn-bg-2: hsla(142, 70%, 35%, 1); /* Slightly darker shade */
+  --btn-bg-color: hsla(0, 0%, 100%, 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(37, 211, 102, 0.5),
+    0px 5px 5px -1px rgba(18, 140, 126, 0.25),
+    inset 4px 4px 8px rgba(220, 255, 228, 0.5),
+    inset -4px -4px 8px rgba(7, 94, 84, 0.35);
+}
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.popup-whatsIcon{
+  color: white;
+}
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
