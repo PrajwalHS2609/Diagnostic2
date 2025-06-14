@@ -239,8 +239,16 @@
   width: 20px;
   height: 20px;
 }
+.blog-subContainer {
+  /* border: solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .main-container > h2 {
-  /* border: solid ; */
+  /* border: solid; */
   color: var(--customColor1);
   font-weight: bold;
   letter-spacing: 2px;

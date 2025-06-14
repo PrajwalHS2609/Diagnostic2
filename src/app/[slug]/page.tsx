@@ -1,4 +1,4 @@
-import { PortableText, type SanityDocument } from "next-sanity";
+import { PortableText, type PortableTextReactComponents } from "next-sanity";
 import { client } from "@/sanity/client";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -14,7 +14,20 @@ import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import BlogSidebar from "@/components/Blog/BlogSidebar/BlogSidebar";
 import ConsultationHeader from "@/components/Consultation/ConsultationHeader/ConsultationHeader";
 import sanityServiceBanner from "@/Images/sanityServiceBanner.png";
+
 export const revalidate = 0;
+
+// PortableText components with proper key props
+const portableTextComponents: Partial<PortableTextReactComponents> = {
+  list: {
+    bullet: ({ children }) => <ul>{children}</ul>,
+    number: ({ children }) => <ol>{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children, value }) => <li key={value._key}>{children}</li>,
+    number: ({ children, value }) => <li key={value._key}>{children}</li>,
+  },
+};
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   _id,
@@ -41,7 +54,6 @@ const SERVICE_QUERY = `*[_type == "ServiceCategory" && slug.current == $slug][0]
   }
 }`;
 
-// ✅ keep generateMetadata as you wanted
 export async function generateMetadata({
   params,
 }: {
@@ -74,10 +86,8 @@ export default async function SlugPage({
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
-  const post = await client.fetch<SanityDocument>(POST_QUERY, { slug });
-  const service = !post
-    ? await client.fetch<SanityDocument>(SERVICE_QUERY, { slug })
-    : null;
+  const post = await client.fetch(POST_QUERY, { slug });
+  const service = !post ? await client.fetch(SERVICE_QUERY, { slug }) : null;
   const content = post || service;
 
   if (!content) notFound();
@@ -98,32 +108,40 @@ export default async function SlugPage({
         ) : isPost ? (
           <p className="image-fallback">Image not available</p>
         ) : null}
+
         {!isPost && (
-          <>
-            <ConsultationHeader
-              imageSrc={sanityServiceBanner.src}
-              alt="sanity Service Banner"
-              title={content.title}
-              highlight=" "
-              para=""
-              bread={content.title}
-            />
-          </>
+          <ConsultationHeader
+            imageSrc={sanityServiceBanner.src}
+            alt="sanity Service Banner"
+            title={content.title}
+            highlight=" "
+            para=""
+            bread={content.title}
+          />
         )}
+
         <div
           className={isPost ? "blogHead-content" : "diagnosticsHead-container"}
         >
           <div className={isPost ? "blogHead-content" : "Head-container"}>
             <h1>{content.title}</h1>
-            {/* Render body only for posts */}
+
             {isPost && Array.isArray(content.body) && (
-              <PortableText value={content.body} />
+              <PortableText
+                value={content.body}
+                components={portableTextComponents}
+              />
             )}
           </div>
+
           {!isPost && Array.isArray(content.body1) && (
-            <PortableText value={content.body1} />
+            <PortableText
+              value={content.body1}
+              components={portableTextComponents}
+            />
           )}
         </div>
+
         {!isPost && Array.isArray(content.body1) && (
           <>
             <HomeAboutUs />
@@ -133,11 +151,15 @@ export default async function SlugPage({
             <HomeKey />
           </>
         )}
+
         <div
           className={isPost ? "blogHead-content" : "diagnosticsHead-container"}
         >
           {!isPost && Array.isArray(content.body2) && (
-            <PortableText value={content.body2} />
+            <PortableText
+              value={content.body2}
+              components={portableTextComponents}
+            />
           )}
         </div>
       </div>
