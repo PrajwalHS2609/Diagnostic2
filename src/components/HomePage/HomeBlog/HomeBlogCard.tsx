@@ -1,43 +1,39 @@
 import React from "react";
 import "./HomeBlog.css";
 import Link from "next/link";
-const homeBlogCard = () => {
-  const blog = [
-    {
-      id: 1,
-      img: "https://medilo-html.netlify.app/assets/img/project_1.jpg",
-      title: "Medical Of Working",
-      description:
-        "We businesss standard chunk of Ipsum used since is Agency & Star tup",
-      link: "",
-    },
-    {
-      id: 2,
-      img: "https://medilo-html.netlify.app/assets/img/project_2.jpg",
-      title: "Medical Of Working",
-      description:
-        "We businesss standard chunk of Ipsum used since is Agency & Star tup",
-      link: "",
-    },
-    {
-      id: 3,
-      img: "https://medilo-html.netlify.app/assets/img/project_3.jpg",
-      title: "Medical Of Working",
-      description:
-        "We businesss standard chunk of Ipsum used since is Agency & Star tup",
-      link: "",
-    },
-  ];
+import { SanityDocument } from "next-sanity";
+import { client } from "@/sanity/client";
+
+export const revalidate = 0;
+
+const POSTS_QUERY = `*[
+  _type == "post" && defined(slug.current)
+]|order(publishedAt desc)[0...3]{
+  _id,
+  title,
+  slug,
+  description,
+  mainImage{
+    ...,
+    asset->{
+      _id,
+      url
+    }
+  }
+}`;
+export default async function homeBlogCard() {
+  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {});
+
   return (
     <>
-      {blog.map((x) => (
-        <div className="homeBlogCard-container" key={x.id}>
-          <Link href={x.link}>
-            <img src={x.img} alt={x.title} />
+      {posts.map((posts) => (
+        <div className="homeBlogCard-container" key={posts.id}>
+          <Link href={`/${posts.slug.current}`}>
+            <img src={posts.mainImage.asset.url} alt={posts.title} />
             <div className="homeBlogCard-content">
               <div className="homeBlogCard-item">
-                <h5>{x.title}</h5>
-                <p>{x.description}</p>
+                <h5>{posts.title}</h5>
+                <p>{posts.description}</p>
               </div>
             </div>
           </Link>
@@ -45,6 +41,4 @@ const homeBlogCard = () => {
       ))}
     </>
   );
-};
-
-export default homeBlogCard;
+}
