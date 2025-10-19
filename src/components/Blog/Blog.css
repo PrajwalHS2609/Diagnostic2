@@ -155,11 +155,17 @@
   text-align: center;
 }
 .blogHead-content > h2 {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--customColor1);
-  text-align: center;
+  text-align: start;
 }
 .blogHead-content > h3 {
+  font-size: 25px;
+  color: var(--customColor1);
+  text-align: start;
+  width: 100%;
+}
+.blogHead-content > h4 {
   font-size: 25px;
   color: var(--customColor1);
   text-align: start;
