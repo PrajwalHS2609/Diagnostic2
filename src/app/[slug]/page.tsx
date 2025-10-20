@@ -13,7 +13,6 @@ import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimoni
 import HomeWhy from "@/components/HomePage/HomeWhy/HomeWhy";
 import BlogSidebar from "@/components/Blog/BlogSidebar/BlogSidebar";
 import ConsultationHeader from "@/components/Consultation/ConsultationHeader/ConsultationHeader";
-import sanityServiceBanner from "@/Images/sanityServiceBanner.png";
 
 export const revalidate = 0;
 
@@ -111,7 +110,7 @@ export default async function SlugPage({
 
         {!isPost && (
           <ConsultationHeader
-            imageSrc={sanityServiceBanner.src}
+            imageSrc={imageUrl}
             alt="sanity Service Banner"
             title={content.title}
             highlight=" "
