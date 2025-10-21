@@ -133,3 +133,63 @@
 .diagnosticsHead-container p:last-child {
   margin-bottom: 0;
 }
+/* ------------------------------Table--------------------------------------------- */
+.custom-table {
+  /* border: solid red; */
+  width: 100%;
+  margin: 20px 0;
+  overflow-x: auto; /* Horizontal scroll on small screens */
+}
+
+.custom-table > h3 {
+  color: var(--customColor1);
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.custom-table> table {
+  /* border: solid blue; */
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* Rounds table corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: var(--customColor1);
+  white-space: nowrap; /* Prevent text wrapping for cleaner look */
+}
+
+.custom-table th {
+  background-color: var(--customLightColor);
+  font-weight: bold;
+  position: sticky; /* Sticky header for long scrolls */
+  top: 0;
+  z-index: 2;
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: var(--customLightColor);
+}
+/* 
+.custom-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease-in-out;
+} */
+
+@media screen and (max-width: 990px) {
+  .custom-table {
+    overflow-x: auto;
+  }
+
+  .custom-table table {
+    min-width: 600px; /* Keep scroll active if content is wide */
+  }
+}
