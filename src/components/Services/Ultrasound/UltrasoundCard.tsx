@@ -73,9 +73,9 @@ const UltrasoundCard = () => {
               <Link href={x.link}>{x.title}</Link>{" "}
             </h4>
             <p>{x.description}</p>
-            {/* <Link href="/">
-            <button></button>
-          </Link> */}
+            <Link href={x.link}>
+            <button>Read More</button>
+          </Link>
           </div>
         </div>
       ))}

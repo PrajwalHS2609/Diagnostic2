@@ -1,5 +1,6 @@
 import React from "react";
 import "@/components/Style/style.css";
+import Link from "next/link";
 
 const XrayCard = () => {
   const card = [
@@ -15,7 +16,7 @@ const XrayCard = () => {
       img: "https://nisargadiagnostics.com/wp-content/uploads/2023/12/NT-Scan-New.png",
       title: "Bone X-Ray",
       description:
-        "If you’ve suffered a fracture or are experiencing bone pain, our X-Ray in  Bangalore offers detailed imaging of bones, helping doctors assess the extent of the injury and plan appropriate treatment. Bone X-rays are also used to diagnose conditions such as arthritis and osteoporosis.",
+        "If you’ve had a fracture or bone pain, our X-Ray in Bangalore provides detailed bone imaging to help doctors assess injuries and plan treatment. It also helps diagnose conditions like arthritis and osteoporosis.",
     },
     {
       id: 3,
@@ -49,9 +50,9 @@ const XrayCard = () => {
           <div className="subService-item">
             <h4>{x.title}</h4>
             <p>{x.description}</p>
-            {/* <Link href="/">
-            <button></button>
-          </Link> */}
+            <Link href="/">
+              <button>Read More</button>
+            </Link>
           </div>
         </div>
       ))}

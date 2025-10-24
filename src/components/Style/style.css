@@ -46,17 +46,27 @@
   font-size: 20px;
   font-weight: 500;
 }
-.subService-item > h4>a{
+.subService-item > h4 > a {
   text-decoration: none;
-    color: var(--customColor1);&:hover{
-      color: var(--customColor2);
-    }
-
+  color: var(--customColor1);
+  &:hover {
+    color: var(--customColor2);
+  }
 }
 .subService-item > p {
   text-align: justify;
 }
-
+.subService-item > a > button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: solid 2px var(--customColor1);
+  color: var(--customColor1);
+  &:hover {
+    background-color: var(--customColor1);
+    color:white;
+  }
+}
 .consultationContent-container {
   display: flex;
   justify-content: center;
@@ -155,7 +165,7 @@
   margin-bottom: 15px;
 }
 
-.custom-table> table {
+.custom-table > table {
   /* border: solid blue; */
   border-collapse: collapse;
   width: 100%;

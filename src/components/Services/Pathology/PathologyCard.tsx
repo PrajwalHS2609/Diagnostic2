@@ -1,5 +1,6 @@
 import React from "react";
 import "@/components/Style/style.css";
+import Link from "next/link";
 const PathologyCard = () => {
   const card = [
     {
@@ -74,9 +75,9 @@ const PathologyCard = () => {
            <p>
             {x.description}
            </p>
-           {/* <Link href="/">
-             <button></button>
-           </Link> */}
+           <Link href="/">
+             <button>Read More</button>
+           </Link>
          </div>
        </div>
      ))}

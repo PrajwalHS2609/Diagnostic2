@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const RadiologicalProceduresCard = () => {
@@ -74,9 +75,9 @@ const RadiologicalProceduresCard = () => {
           <p>
            {x.description}
           </p>
-          {/* <Link href="/">
-            <button></button>
-          </Link> */}
+          <Link href="/">
+            <button>Read More</button>
+          </Link>
         </div>
       </div>
     ))}

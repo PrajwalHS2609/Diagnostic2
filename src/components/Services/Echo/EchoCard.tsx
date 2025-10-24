@@ -1,5 +1,6 @@
 import React from "react";
 import "@/components/Style/style.css";
+import Link from "next/link";
 
 const EchoCard = () => {
   const card = [
@@ -49,9 +50,9 @@ const EchoCard = () => {
           <div className="subService-item">
             <h4>{x.title}</h4>
             <p>{x.description}</p>
-            {/* <Link href="/">
-          <button></button>
-        </Link> */}
+            <Link href="/">
+          <button>Read More</button>
+        </Link>
           </div>
         </div>
       ))}
