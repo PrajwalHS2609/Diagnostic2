@@ -24,9 +24,9 @@ export default function PostContent({ content }: { content: PostContentType }) {
         {imageUrl && (
           <Image src={imageUrl} alt={content.title} width={550} height={310} />
         )}
-        <h1 className="blogHead-content">{content.title}</h1>
 
         <div className="blogHead-content">
+          <h1>{content.title}</h1>
           <PortableText
             value={content.body}
             components={portableTextComponents}

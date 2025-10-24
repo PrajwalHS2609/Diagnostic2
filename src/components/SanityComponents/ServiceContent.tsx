@@ -1,7 +1,7 @@
 import React from "react";
 import { PortableText } from "next-sanity";
 import { portableTextComponents } from "@/components/PortableTextComponents";
-
+import "@/components/Style/style.css";
 import type { PortableTextBlock } from "@portabletext/types";
 import HomeAboutUs from "../HomePage/HomeAboutUs/HomeAboutUs";
 import HomeWhy from "../HomePage/HomeWhy/HomeWhy";
@@ -41,35 +41,35 @@ export default function ServiceContent({
 
   return (
     <div className="main-container service-wrapper1">
-      {imageUrl && (
-        <ConsultationHeader
-          imageSrc={imageUrl}
-          alt={content.title}
-          title={content.title}
-          bread={content.title}
-          highlight=" "
-          para=""
-        />
-      )}
-
-      <h1 className="head-container">{content.title}</h1>
-
-      {content.body1 && (
-        <div className="head-container">
-          <PortableText
-            value={content.body1}
-            components={portableTextComponents}
+      <div className="page-container">
+        {imageUrl && (
+          <ConsultationHeader
+            imageSrc={imageUrl}
+            alt={content.title}
+            title={content.title}
+            bread={content.title}
+            highlight=" "
+            para=""
           />
+        )}
+
+        <div className="diagnosticsHead-container">
+          <h1 className="head-container">{content.title}</h1>
+
+          {content.body1 && (
+            <PortableText
+              value={content.body1}
+              components={portableTextComponents}
+            />
+          )}
         </div>
-      )}
-
-      <div className="head-container">
-        <HomeAboutUs />
-        <HomeWhy />
-        <HomeDoctor />
-        <HomeTestimonial />
-        <HomeKey />
-
+        <>
+          <HomeAboutUs />
+          <HomeWhy />
+          <HomeDoctor />
+          <HomeTestimonial />
+          <HomeKey />
+        </>
         {youtubeUrl && (
           <div className="youtube-container">
             <iframe
@@ -87,48 +87,48 @@ export default function ServiceContent({
             />
           </div>
         )}
-      </div>
 
-      {content.body2 && (
-        <div className="slugContent-wrapper">
-          <div className="slugContent-container">
-            <PortableText
-              value={content.body2}
-              components={portableTextComponents}
-            />
+        <div className="diagnosticsHead-container">
+          {content.body2 && (
+            <>
+              <PortableText
+                value={content.body2}
+                components={portableTextComponents}
+              />
 
-            {content.customTable && (
-              <div className="custom-table">
-                {content.customTable.title && (
-                  <h3>{content.customTable.title}</h3>
-                )}
-                <table>
-                  <thead>
-                    <tr>
-                      {content.customTable.headers?.map((header, idx) => (
-                        <th key={idx}>{header}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {content.customTable.rows?.map((row, rowIndex) => (
-                      <tr key={rowIndex}>
-                        {row.cells.map((cell, cellIndex) => (
-                          <td key={cellIndex}>{cell}</td>
+              {content.customTable && (
+                <div className="custom-table">
+                  {content.customTable.title && (
+                    <h3>{content.customTable.title}</h3>
+                  )}
+                  <table>
+                    <thead>
+                      <tr>
+                        {content.customTable.headers?.map((header, idx) => (
+                          <th key={idx}>{header}</th>
                         ))}
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
-          </div>
+                    </thead>
+                    <tbody>
+                      {content.customTable.rows?.map((row, rowIndex) => (
+                        <tr key={rowIndex}>
+                          {row.cells.map((cell, cellIndex) => (
+                            <td key={cellIndex}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
 
-          {Array.isArray(content?.faq) && content.faq.length > 0 && (
-            <FaqComponent faqs={content.faq} />
+              {Array.isArray(content?.faq) && content.faq.length > 0 && (
+                <FaqComponent faqs={content.faq} />
+              )}
+            </>
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 }
