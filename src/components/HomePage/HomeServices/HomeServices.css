@@ -42,7 +42,7 @@
   font-weight: 500;
 }
 .homeServicesCard-container {
-  /* border: solid yellow; */
+  border: solid yellow;
   width: 100%;
   padding: 10px;
   display: flex;
