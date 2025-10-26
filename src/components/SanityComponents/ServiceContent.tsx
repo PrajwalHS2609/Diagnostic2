@@ -10,6 +10,7 @@ import HomeTestimonial from "../HomePage/HomeTestimonial/HomeTestimonial";
 import HomeKey from "../HomePage/HomeKey/HomeKey";
 import ConsultationHeader from "../Consultation/ConsultationHeader/ConsultationHeader";
 import FaqComponent from "../FaqComponent/FaqComponent";
+import PregnancyUltrasoundServices from "./../PregnancyUltrasoundServices/PregnancyUltrasoundServices";
 
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
@@ -22,7 +23,7 @@ export type CustomTable = {
 export type ServiceContentType = {
   _id: string;
   title: string;
-  slug: string;
+  slug: string | { current: string }; // ✅ handles both string or object cases
   body1?: PortableTextBlock[];
   body2?: PortableTextBlock[];
   mainImage?: { asset?: { url?: string } };
@@ -30,7 +31,19 @@ export type ServiceContentType = {
   faq?: FaqItem[];
   customTable?: CustomTable;
 };
+const serviceComponents: Record<string, React.ReactNode> = {
+  "pregnancy-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
+    "anomaly-scan-in-bangalore": <PregnancyUltrasoundServices />,
+  "dating-scan-in-bangalore": <PregnancyUltrasoundServices />,
+  "fetal-echocardiogram-in-bangalore": <PregnancyUltrasoundServices />,
+  "nt-scan-in-bangalore": <PregnancyUltrasoundServices />,
+  "abdominal-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
+  "3d-and-4d-fetal-scan-in-bangalore": <PregnancyUltrasoundServices />,
+  "endoscopic-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
+  "duplex-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
+  "triplex-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
 
+};
 export default function ServiceContent({
   content,
 }: {
@@ -64,6 +77,11 @@ export default function ServiceContent({
           )}
         </div>
         <>
+          {serviceComponents[
+            typeof content.slug === "string"
+              ? content.slug
+              : content.slug?.current
+          ] ?? null}{" "}
           <HomeAboutUs />
           <HomeWhy />
           <HomeDoctor />
