@@ -3,7 +3,8 @@ import BlogSidebar from "../Blog/BlogSidebar/BlogSidebar";
 import FaqComponent from "../FaqComponent/FaqComponent";
 import Image from "next/image";
 import { portableTextComponents } from "../PortableTextComponents";
-
+import "@/components/Blog/Blog.css";
+import "@/components/Style/style.css";
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
 export type PostContentType = {
