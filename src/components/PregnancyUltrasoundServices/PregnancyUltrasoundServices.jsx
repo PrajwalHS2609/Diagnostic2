@@ -43,38 +43,7 @@ const PregnancyUltrasoundServices = () => {
       description:
         "3D & 4D Fetal Scan in Bangalore provide lifelike images and real-time videos of your baby, giving you a unique bonding experience while keeping track of fetal health.",
     },
-    {
-      id: 6,
-      img: "https://cdn.sanity.io/images/b9esbgnl/production/28b5b4f42acb378e4c72e7057ad40f1d8c05a0c6-1920x1080.png",
-      title: "Abdominal Ultrasound",
-      link: "/abdominal-ultrasound-in-bangalore",
-      description:
-        "Abdominal ultrasound in Bangalore is one of the most common and reliable imaging tests for diagnosing internal conditions and ensuring your abdominal organs are functioning well.",
-    },
-    {
-      id: 7,
-      img: "https://cdn.sanity.io/images/b9esbgnl/production/28b5b4f42acb378e4c72e7057ad40f1d8c05a0c6-1920x1080.png",
-      title: "Endoscopic Ultrasound",
-      link: "/endoscopic-ultrasound-in-bangalore",
-      description:
-        "Endoscopic Ultrasound in Bangalore has emerged as one of the most advanced diagnostic imaging procedures, providing highly detailed images of internal organs and tissues.",
-    },
-    {
-      id: 8,
-      img: "https://cdn.sanity.io/images/b9esbgnl/production/39a5da4b4bed3ad17e50d952553fc66c3bb2ff50-1920x1080.png",
-      title: "Duplex Ultrasound",
-      link: "/duplex-ultrasound-in-bangalore",
-      description:
-        "Duplex Ultrasound in Bangalore is one of the most advanced, non-invasive diagnostic imaging tests used to evaluate blood flow in arteries and veins.",
-    },
-    {
-      id: 9,
-      img: "https://cdn.sanity.io/images/b9esbgnl/production/7752def8629771a7c61912e9456221e6bad171f2-1920x1080.png",
-      title: "Triplex Ultrasound",
-      link: "/triplex-ultrasound-in-bangalore",
-      description:
-        "Triplex Ultrasound in Bangalore is one of the most advanced diagnostic imaging techniques used to evaluate blood flow, tissue structure, and organ function in real-time.",
-    },
+
   ];
   return (
     <div className="subService-container">

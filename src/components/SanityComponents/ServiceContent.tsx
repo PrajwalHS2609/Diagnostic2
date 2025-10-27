@@ -11,6 +11,7 @@ import HomeKey from "../HomePage/HomeKey/HomeKey";
 import ConsultationHeader from "../Consultation/ConsultationHeader/ConsultationHeader";
 import FaqComponent from "../FaqComponent/FaqComponent";
 import PregnancyUltrasoundServices from "./../PregnancyUltrasoundServices/PregnancyUltrasoundServices";
+import AbdominalUltrasound from "./../AbdominalUltrasound/AbdominalUltrasound";
 
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
@@ -32,17 +33,19 @@ export type ServiceContentType = {
   customTable?: CustomTable;
 };
 const serviceComponents: Record<string, React.ReactNode> = {
+  // ----------------------Pregnancy Ultrasound--------------------------
   "pregnancy-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
-    "anomaly-scan-in-bangalore": <PregnancyUltrasoundServices />,
+  "anomaly-scan-in-bangalore": <PregnancyUltrasoundServices />,
   "dating-scan-in-bangalore": <PregnancyUltrasoundServices />,
   "fetal-echocardiogram-in-bangalore": <PregnancyUltrasoundServices />,
   "nt-scan-in-bangalore": <PregnancyUltrasoundServices />,
-  "abdominal-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
   "3d-and-4d-fetal-scan-in-bangalore": <PregnancyUltrasoundServices />,
-  "endoscopic-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
-  "duplex-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
-  "triplex-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
 
+  // ------------------Abdominal Ultrasound----------------------
+  "abdominal-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "endoscopic-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "duplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "triplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
 };
 export default function ServiceContent({
   content,
