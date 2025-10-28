@@ -47,7 +47,7 @@ const UltrasoundCard = () => {
       id: 5,
       img: vascular,
       title: "Vascular Ultrasound",
-      link: "/",
+      link: "/vascular-ultrasound-in-bangalore",
       description:
         "Blood flow abnormalities can be detected using our vascular Ultrasound Scan in  Bangalore. This type of ultrasound is critical for diagnosing conditions such as deep vein thrombosis (DVT) or peripheral artery disease (PAD).",
     },

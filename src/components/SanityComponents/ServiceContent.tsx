@@ -10,9 +10,9 @@ import HomeTestimonial from "../HomePage/HomeTestimonial/HomeTestimonial";
 import HomeKey from "../HomePage/HomeKey/HomeKey";
 import ConsultationHeader from "../Consultation/ConsultationHeader/ConsultationHeader";
 import FaqComponent from "../FaqComponent/FaqComponent";
-import PregnancyUltrasoundServices from "./../PregnancyUltrasoundServices/PregnancyUltrasoundServices";
-import AbdominalUltrasound from "./../AbdominalUltrasound/AbdominalUltrasound";
-
+import PregnancyUltrasoundServices from "../UltrasoundSubServices/PregnancyUltrasoundServices/PregnancyUltrasoundServices";
+import AbdominalUltrasound from "../UltrasoundSubServices/AbdominalUltrasound/AbdominalUltrasound";
+import VascularUltrasoundService from "./../UltrasoundSubServices/VascularUltrasoundService/VascularUltrasoundService";
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
 export type CustomTable = {
@@ -46,6 +46,14 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "endoscopic-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "duplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "triplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
+
+  // ------------------Vascular Ultrasound----------------------
+  "vascular-ultrasound-in-bangalore": <VascularUltrasoundService />,
+  "carotid-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
+  "venous-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
+  "arterial-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
+  "aortic-ultrasound-in-bangalore": <VascularUltrasoundService />,
+  "renal-artery-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
 };
 export default function ServiceContent({
   content,
