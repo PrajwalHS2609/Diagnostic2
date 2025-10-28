@@ -13,6 +13,7 @@ import FaqComponent from "../FaqComponent/FaqComponent";
 import PregnancyUltrasoundServices from "../UltrasoundSubServices/PregnancyUltrasoundServices/PregnancyUltrasoundServices";
 import AbdominalUltrasound from "../UltrasoundSubServices/AbdominalUltrasound/AbdominalUltrasound";
 import VascularUltrasoundService from "./../UltrasoundSubServices/VascularUltrasoundService/VascularUltrasoundService";
+import ThyroidUltrasoundServices from "./../UltrasoundSubServices/ThyroidUltrasoundServices/ThyroidUltrasoundServices";
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
 export type CustomTable = {
@@ -57,6 +58,12 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "arterial-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
   "aortic-ultrasound-in-bangalore": <VascularUltrasoundService />,
   "renal-artery-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
+
+  // ------------------Thyroid Ultrasound----------------------
+  "thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
+  "gray-scale-thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
+  "color-doppler-thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
+  "elastography-in-bangalore": <ThyroidUltrasoundServices />,
 };
 export default function ServiceContent({
   content,

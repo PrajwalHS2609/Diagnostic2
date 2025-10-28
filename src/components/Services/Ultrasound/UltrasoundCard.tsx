@@ -1,12 +1,12 @@
 import React from "react";
 import "@/components/Style/style.css";
 import Link from "next/link";
-import pregnancy from "@/Images/ultrasound/Pregnancy Ultrasound.png";
-import abdominal from "@/Images/ultrasound/Abdominal Ultrasound.png";
-import pelvic from "@/Images/ultrasound/Pelvic scan.png";
-import thyroid from "@/Images/ultrasound/Tumor Markers Test.png";
-import vascular from "@/Images/ultrasound/Vascular Ultrasound.png";
-import breast from "@/Images/ultrasound/Breast Ultrasound.png";
+import pregnancy from "@/Images/ultrasound/Pregnancy Ultrasound in Bangalore.png";
+import abdominal from "@/Images/ultrasound/Abdominal Ultrasound in Bangalore.png";
+import pelvic from "@/Images/ultrasound/Pelvic Ultrasound in Bangalore.png";
+import thyroid from "@/Images/ultrasound/Thyroid Ultrasound in Bangalore.png";
+import vascular from "@/Images/ultrasound/Vascular Ultrasound in Bangalore.png";
+import breast from "@/Images/ultrasound/breast scan in Bangalore.png";
 import Image from "next/image";
 
 const UltrasoundCard = () => {
@@ -39,7 +39,7 @@ const UltrasoundCard = () => {
       id: 4,
       img: thyroid,
       title: "Thyroid Ultrasound",
-      link: "/",
+      link: "/thyroid-ultrasound-in-bangalore",
       description:
         "Thyroid issues are common, and our Ultrasound Scan in  Bangalore offers a non-invasive way to examine the thyroid gland. This scan can help in diagnosing conditions like thyroid nodules, goiters, or thyroid cancer.",
     },
@@ -55,7 +55,7 @@ const UltrasoundCard = () => {
       id: 6,
       img: breast,
       title: "Breast Ultrasound",
-      link: "/",
+      link: "/breast-ultrasound-in-bangalore",
       description:
         "For women who are undergoing breast cancer screenings or who have detected lumps, a breast ultrasound can provide important diagnostic insights. Our Ultrasound Scan in  Bangalore is part of our comprehensive women’s health services.",
     },
