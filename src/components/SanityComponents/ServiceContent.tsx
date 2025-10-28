@@ -46,6 +46,9 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "endoscopic-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "duplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "triplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "kub-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "transabdominal-ultrasound-in-bangalore": <AbdominalUltrasound />,
+  "transvaginal-ultrasound-in-bangalore": <AbdominalUltrasound />,
 
   // ------------------Vascular Ultrasound----------------------
   "vascular-ultrasound-in-bangalore": <VascularUltrasoundService />,
