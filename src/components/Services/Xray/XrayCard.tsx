@@ -59,7 +59,9 @@ const XrayCard = () => {
             <Image src={x.img} alt={x.title} />
           </div>
           <div className="subService-item">
-            <h4>{x.title}</h4>
+            <Link href={x.link}>
+              <h4>{x.title}</h4>
+            </Link>
             <p>{x.description}</p>
             <Link href={x.link}>
               <button>Read More</button>
