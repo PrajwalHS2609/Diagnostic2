@@ -140,7 +140,7 @@ export default function ServiceContent({
                   {content.customTable.title && (
                     <h3>{content.customTable.title}</h3>
                   )}
-                  <table>
+                  <table className="customTable-table">
                     <thead>
                       <tr>
                         {content.customTable.headers?.map((header, idx) => (

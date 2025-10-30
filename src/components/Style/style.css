@@ -64,7 +64,7 @@
   color: var(--customColor1);
   &:hover {
     background-color: var(--customColor1);
-    color:white;
+    color: white;
   }
 }
 .consultationContent-container {
@@ -150,63 +150,85 @@
 .diagnosticsHead-container p:last-child {
   margin-bottom: 0;
 }
+@media screen and (max-width:768px) {
+  .diagnosticsHead-container {
+  margin: 0 auto;
+  padding: 15px;
+  line-height: 1.6;
+  border-radius: 20px;
+  box-shadow: 0 0 10px grey;
+}
+}
 /* ------------------------------Table--------------------------------------------- */
 .custom-table {
-  /* border: solid red; */
   width: 100%;
-  margin: 20px 0;
-  overflow-x: auto; /* Horizontal scroll on small screens */
-}
-
-.custom-table > h3 {
-  color: var(--customColor1);
-  width: 100%;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.custom-table > table {
-  /* border: solid blue; */
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden; /* Rounds table corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-.custom-table th,
-.custom-table td {
-  border: 1px solid #ddd;
+  margin: 2rem 0;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
   padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.custom-table h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 1rem;
   text-align: left;
-  color: var(--customColor1);
-  white-space: nowrap; /* Prevent text wrapping for cleaner look */
 }
 
-.custom-table th {
-  background-color: var(--customLightColor);
-  font-weight: bold;
-  position: sticky; /* Sticky header for long scrolls */
-  top: 0;
-  z-index: 2;
+/* Table Base */
+.customTable-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.custom-table tr:nth-child(even) {
-  background-color: var(--customLightColor);
+/* Header */
+.customTable-table thead {
+  background: #007bff;
+  color: #fff;
 }
-/* 
-.custom-table tr:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  transition: background 0.2s ease-in-out;
-} */
 
-@media screen and (max-width: 990px) {
-  .custom-table {
-    overflow-x: auto;
-  }
+.customTable-table th {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #fff; /* white borders */
+  min-width: 300px; /* makes columns balanced without overflow */
+  word-wrap: break-word;
+}
 
-  .custom-table table {
-    min-width: 600px; /* Keep scroll active if content is wide */
+/* Body */
+.customTable-table td {
+  padding: 12px 16px;
+  border: 1px solid #fff; /* visible white lines */
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  background: #f8faff;
+  vertical-align: top;
+}
+
+/* Zebra effect */
+.customTable-table tbody tr:nth-child(even) td {
+  background: #f0f6ff;
+}
+
+/* Hover */
+.customTable-table tbody tr:hover td {
+  background: #e2edff;
+}
+
+/* Scroll handling for small screens */
+@media (max-width: 768px) {
+  .customTable-table th,
+  .customTable-table td {
+    min-width: 250px;
+    font-size: 0.9rem;
   }
 }
