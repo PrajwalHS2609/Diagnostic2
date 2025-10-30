@@ -132,10 +132,10 @@
   text-align: start;
 }
 .diagnosticsHead-container > p > strong {
-  color: var(--customColor2);
+  color: var(--customColor1);
 }
 .diagnosticsHead-container > ul > li > strong {
-  color: var(--customColor2);
+  color: var(--customColor1);
 }
 .diagnosticsHead-container p {
   font-size: 16px;
@@ -150,14 +150,14 @@
 .diagnosticsHead-container p:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .diagnosticsHead-container {
-  margin: 0 auto;
-  padding: 15px;
-  line-height: 1.6;
-  border-radius: 20px;
-  box-shadow: 0 0 10px grey;
-}
+    margin: 0 auto;
+    padding: 15px;
+    line-height: 1.6;
+    border-radius: 20px;
+    box-shadow: 0 0 10px grey;
+  }
 }
 /* ------------------------------Table--------------------------------------------- */
 .custom-table {
@@ -226,6 +226,9 @@
 
 /* Scroll handling for small screens */
 @media (max-width: 768px) {
+  .custom-table {
+    padding: 0;
+  }
   .customTable-table th,
   .customTable-table td {
     min-width: 250px;
