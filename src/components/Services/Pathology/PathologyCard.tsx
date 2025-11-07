@@ -50,7 +50,7 @@ const PathologyCard = () => {
       title: "Serology",
       description:
         "Serology at  Diagnostics investigates blood serum for antibodies, aiding in the diagnosis of various infections and autoimmune disorders with precision and comprehensive understanding.",
-      link: "/serology -blood-tests-in-bangalore",
+      link: "/serology-blood-tests-in-bangalore",
     },
     {
       id: 7,
