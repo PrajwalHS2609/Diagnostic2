@@ -1,34 +1,27 @@
-import { PortableTextComponents } from "@portabletext/react";
-import Image from "next/image";
+import { PortableTextComponents, PortableTextBlock } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { PortableText } from "@portabletext/react";
+import "@/components/Style/style.css";
 
-// Build Sanity image URLs
 const builder = imageUrlBuilder(client);
 function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 
-// ✅ Define custom TypeScript interfaces
+// ✅ Define types
 interface CustomTableRow {
   cells: string[];
 }
-
 interface CustomTableValue {
   title?: string;
   headers: string[];
   rows: CustomTableRow[];
 }
-
-interface AccordionItem {
-  title: string;
-  content: string;
-}
-
 interface AccordionBlockValue {
-  title?: string;
-  items: AccordionItem[];
+  title: string;
+  content: PortableTextBlock[]; // ✅ Proper type instead of any[]
 }
 
 export const portableTextComponents: PortableTextComponents = {
@@ -36,17 +29,30 @@ export const portableTextComponents: PortableTextComponents = {
     // 🖼️ Image Renderer
     image: ({ value }) => {
       if (!value?.asset?._ref) return null;
-      const imageUrl = urlFor(value).width(800).height(500).url();
+      const imageUrl = urlFor(value).url();
+      const href = value.link || null;
 
       return (
         <div className="portableImg">
-          <Image
-            src={imageUrl}
-            alt={value.alt || "Blog image"}
-            width={800}
-            height={500}
-            className="rounded-lg object-cover"
-          />
+          {href ? (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <img
+                src={imageUrl}
+                alt={value.alt || "img"}
+                width={2000}
+                height={1000}
+                className="rounded-lg object-cover"
+              />
+            </a>
+          ) : (
+            <img
+              src={imageUrl}
+              alt={value.alt || "img"}
+              width={1400}
+              height={900}
+              className="rounded-lg object-cover"
+            />
+          )}
         </div>
       );
     },
@@ -54,11 +60,9 @@ export const portableTextComponents: PortableTextComponents = {
     // 📊 Custom Table Renderer
     customTable: ({ value }: { value: CustomTableValue }) => {
       if (!value?.rows || !value?.headers) return null;
-
       return (
         <div className="custom-table">
           {value.title && <h3>{value.title}</h3>}
-
           <table className="customTable-table">
             <thead>
               <tr>
@@ -67,7 +71,6 @@ export const portableTextComponents: PortableTextComponents = {
                 ))}
               </tr>
             </thead>
-
             <tbody>
               {value.rows.map((row, rowIndex) => (
                 <tr key={rowIndex}>
@@ -84,20 +87,19 @@ export const portableTextComponents: PortableTextComponents = {
 
     // 🔽 Accordion Renderer
     accordionBlock: ({ value }: { value: AccordionBlockValue }) => {
-      if (!value?.items?.length) return null;
-
+      if (!value?.content) return null;
       return (
-        <div className="custom-accordion">
-          {value.title && <h3>{value.title}</h3>}
-          {value.items.map((item, idx) => (
-            <details key={idx} className="accordion-item">
-              <summary className="accordion-title">{item.title}</summary>
-              <div className="accordion-content">
-                <p>{item.content}</p>
-              </div>
-            </details>
-          ))}
-        </div>
+        <details className="accordion-item">
+          <summary className="accordion-title">
+            <h3>{value.title}</h3>
+          </summary>
+          <div className="accordion-content">
+            <PortableText
+              value={value.content}
+              components={portableTextComponents}
+            />
+          </div>
+        </details>
       );
     },
   },

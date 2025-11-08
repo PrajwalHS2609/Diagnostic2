@@ -62,10 +62,27 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        },
+        {
+          name: 'link', // <-- Add this
+          type: 'url',
+          title: 'Link URL',
+        },
+      ],
+    }),
+
+    defineArrayMember({
+      type: 'customTable', // <-- matches the name in table.ts
     }),
     
-        defineArrayMember({
-      type: 'customTable', // <-- matches the name in table.ts
+    // ✅ Accordion Support
+    defineArrayMember({
+      type: 'accordionBlock',
     }),
   ],
 })
