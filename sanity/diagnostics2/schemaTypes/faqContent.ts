@@ -26,7 +26,7 @@ export default {
             {
               name: 'answer',
               title: 'Answer',
-              type: 'text',
+              type: 'blockContent', // instead of 'text'
             },
           ],
         },
