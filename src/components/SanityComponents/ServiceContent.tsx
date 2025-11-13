@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { PortableText } from "next-sanity";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import "@/components/Style/style.css";
 import type { PortableTextBlock } from "@portabletext/types";
+
+// ✅ Components
 import HomeAboutUs from "../HomePage/HomeAboutUs/HomeAboutUs";
 import HomeWhy from "../HomePage/HomeWhy/HomeWhy";
 import HomeDoctor from "../HomePage/HomeDoctor/HomeDoctor";
@@ -12,8 +18,10 @@ import ConsultationHeader from "../Consultation/ConsultationHeader/ConsultationH
 import FaqComponent from "../FaqComponent/FaqComponent";
 import PregnancyUltrasoundServices from "../UltrasoundSubServices/PregnancyUltrasoundServices/PregnancyUltrasoundServices";
 import AbdominalUltrasound from "../UltrasoundSubServices/AbdominalUltrasound/AbdominalUltrasound";
-import VascularUltrasoundService from "./../UltrasoundSubServices/VascularUltrasoundService/VascularUltrasoundService";
-import ThyroidUltrasoundServices from "./../UltrasoundSubServices/ThyroidUltrasoundServices/ThyroidUltrasoundServices";
+import VascularUltrasoundService from "../UltrasoundSubServices/VascularUltrasoundService/VascularUltrasoundService";
+import ThyroidUltrasoundServices from "../UltrasoundSubServices/ThyroidUltrasoundServices/ThyroidUltrasoundServices";
+
+// ✅ Types
 export type FaqItem = { question: string; answer: PortableTextBlock[] };
 
 export type CustomTable = {
@@ -22,19 +30,32 @@ export type CustomTable = {
   rows?: { cells: string[] }[];
 };
 
+export type CarouselImage = {
+  asset?: { url?: string };
+  alt?: string;
+  caption?: string;
+  link?: string; // ✅ Added link field
+};
+
 export type ServiceContentType = {
   _id: string;
   title: string;
-  slug: string | { current: string }; // ✅ handles both string or object cases
+  slug: string | { current: string };
   body1?: PortableTextBlock[];
   body2?: PortableTextBlock[];
   mainImage?: { asset?: { url?: string } };
   youtubeVideoUrl?: string;
   faq?: FaqItem[];
   customTable?: CustomTable;
+  carouselBlock?: {
+    title?: string;
+    images?: CarouselImage[];
+  };
 };
+
+// ✅ Sub-service mapping
 const serviceComponents: Record<string, React.ReactNode> = {
-  // ----------------------Pregnancy Ultrasound--------------------------
+  // Pregnancy Ultrasound
   "pregnancy-ultrasound-in-bangalore": <PregnancyUltrasoundServices />,
   "anomaly-scan-in-bangalore": <PregnancyUltrasoundServices />,
   "dating-scan-in-bangalore": <PregnancyUltrasoundServices />,
@@ -42,7 +63,7 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "nt-scan-in-bangalore": <PregnancyUltrasoundServices />,
   "3d-and-4d-fetal-scan-in-bangalore": <PregnancyUltrasoundServices />,
 
-  // ------------------Abdominal Ultrasound----------------------
+  // Abdominal Ultrasound
   "abdominal-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "endoscopic-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "duplex-ultrasound-in-bangalore": <AbdominalUltrasound />,
@@ -51,7 +72,7 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "transabdominal-ultrasound-in-bangalore": <AbdominalUltrasound />,
   "transvaginal-ultrasound-in-bangalore": <AbdominalUltrasound />,
 
-  // ------------------Vascular Ultrasound----------------------
+  // Vascular Ultrasound
   "vascular-ultrasound-in-bangalore": <VascularUltrasoundService />,
   "carotid-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
   "venous-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
@@ -59,12 +80,15 @@ const serviceComponents: Record<string, React.ReactNode> = {
   "aortic-ultrasound-in-bangalore": <VascularUltrasoundService />,
   "renal-artery-duplex-ultrasound-in-bangalore": <VascularUltrasoundService />,
 
-  // ------------------Thyroid Ultrasound----------------------
+  // Thyroid Ultrasound
   "thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
   "gray-scale-thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
-  "color-doppler-thyroid-ultrasound-in-bangalore": <ThyroidUltrasoundServices />,
+  "color-doppler-thyroid-ultrasound-in-bangalore": (
+    <ThyroidUltrasoundServices />
+  ),
   "elastography-in-bangalore": <ThyroidUltrasoundServices />,
 };
+
 export default function ServiceContent({
   content,
 }: {
@@ -72,10 +96,16 @@ export default function ServiceContent({
 }) {
   const imageUrl = content?.mainImage?.asset?.url;
   const youtubeUrl = content?.youtubeVideoUrl;
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex: number) => setIndex(selectedIndex);
+  const resolvedSlug =
+    typeof content.slug === "string" ? content.slug : content.slug?.current;
 
   return (
     <div className="main-container service-wrapper1">
       <div className="page-container">
+        {/* ✅ Header */}
         {imageUrl && (
           <ConsultationHeader
             imageSrc={imageUrl}
@@ -87,6 +117,7 @@ export default function ServiceContent({
           />
         )}
 
+        {/* ✅ Body 1 */}
         <div className="diagnosticsHead-container">
           <h1 className="head-container">{content.title}</h1>
 
@@ -96,19 +127,53 @@ export default function ServiceContent({
               components={portableTextComponents}
             />
           )}
+
+          {/* ✅ Carousel Section */}
+          {content.carouselBlock?.images?.length ? (
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+              {content.carouselBlock.images.map((img, i) => (
+                <Carousel.Item key={i}>
+                  {img.link ? (
+                    <a
+                      href={img.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={img.asset?.url}
+                        alt={img.alt || `Slide ${i + 1}`}
+                        className="d-block w-100 rounded"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={img.asset?.url}
+                      alt={img.alt || `Slide ${i + 1}`}
+                      className="d-block w-100 rounded"
+                    />
+                  )}
+                  {img.caption && (
+                    <Carousel.Caption>
+                      <h3>{img.caption}</h3>
+                    </Carousel.Caption>
+                  )}
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          ) : null}
         </div>
-        <>
-          {serviceComponents[
-            typeof content.slug === "string"
-              ? content.slug
-              : content.slug?.current
-          ] ?? null}{" "}
-          <HomeAboutUs />
-          <HomeWhy />
-          <HomeDoctor />
-          <HomeTestimonial />
-          <HomeKey />
-        </>
+
+        {/* ✅ Dynamic Sub-Service Section */}
+        {serviceComponents[resolvedSlug] ?? null}
+
+        {/* ✅ Shared Components */}
+        <HomeAboutUs />
+        <HomeWhy />
+        <HomeDoctor />
+        <HomeTestimonial />
+        <HomeKey />
+
+        {/* ✅ YouTube Video Section */}
         {youtubeUrl && (
           <div className="youtube-container">
             <iframe
@@ -116,8 +181,12 @@ export default function ServiceContent({
               height="500"
               src={
                 youtubeUrl.includes("youtu.be")
-                  ? `https://www.youtube.com/embed/${youtubeUrl.split("/").pop()?.split("?")[0]}`
-                  : `https://www.youtube.com/embed/${youtubeUrl.split("v=")[1]}`
+                  ? `https://www.youtube.com/embed/${
+                      youtubeUrl.split("/").pop()?.split("?")[0]
+                    }`
+                  : `https://www.youtube.com/embed/${
+                      youtubeUrl.split("v=")[1]?.split("&")[0]
+                    }`
               }
               title={content.title}
               frameBorder="0"
@@ -127,6 +196,7 @@ export default function ServiceContent({
           </div>
         )}
 
+        {/* ✅ Body 2 + Table + FAQ */}
         <div className="diagnosticsHead-container">
           {content.body2 && (
             <>
@@ -135,6 +205,7 @@ export default function ServiceContent({
                 components={portableTextComponents}
               />
 
+              {/* ✅ Custom Table */}
               {content.customTable && (
                 <div className="custom-table">
                   {content.customTable.title && (
@@ -161,7 +232,8 @@ export default function ServiceContent({
                 </div>
               )}
 
-              {Array.isArray(content?.faq) && content.faq.length > 0 && (
+              {/* ✅ FAQ Section */}
+              {Array.isArray(content.faq) && content.faq.length > 0 && (
                 <FaqComponent faqs={content.faq} />
               )}
             </>

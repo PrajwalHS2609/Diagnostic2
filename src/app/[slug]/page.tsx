@@ -1,19 +1,80 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { client } from "@/sanity/client";
-import PostContent, { PostContentType } from "../../components/SanityComponents/Post";
-import ServiceContent, { ServiceContentType } from "../../components/SanityComponents/ServiceContent";
 
+import PostContent, {
+  PostContentType,
+} from "../../components/SanityComponents/Post";
+import ServiceContent, {
+  ServiceContentType,
+} from "../../components/SanityComponents/ServiceContent";
 
+// ✅ Combined Query for Post Page (with Global Carousel)
+const POST_QUERY = `{
+  "post": *[_type == "post" && slug.current == $slug][0]{
+    _id,
+    title,
+    slug,
+    body,
+    mainImage { asset->{ url } },
+    youtubeVideoUrl,
+    faq[] { question, answer }
+  },
+  "carouselBlock": *[_type == "carouselBlock"][0]{
+    title,
+    images[] {
+      alt,
+      caption,
+      link,
+      asset->{ url }
+    }
+  }
+}`;
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{_id, title, slug, body, mainImage { asset->{ url } }, youtubeVideoUrl, faq[] { question, answer }}`;
-const SERVICE_QUERY = `*[_type == "ServiceCategory" && slug.current == $slug][0]{_id, title, slug, body1, body2, mainImage { asset->{ url } }, youtubeVideoUrl, faq[] { question, answer }, customTable{title, headers, rows[] {cells}}}`;
-// const NEWS_QUERY = `*[_type == "news" && slug.current == $slug][0]{_id, title, slug, body, author, publishedAt, mainImage { asset->{ url } }, faq[] { question, answer }}`;
+// ✅ Query for Service Page (with Global Carousel)
+const SERVICE_QUERY = `{
+  "service": *[_type == "ServiceCategory" && slug.current == $slug][0]{
+    _id,
+    title,
+    slug,
+    body1,
+    body2,
+    metaTitle,
+    metaDescription,
+    mainImage { asset->{_id, url} },
+    youtubeVideoUrl,
+    faq,
+    customTable
+  },
+  "carouselBlock": *[_type == "carouselBlock"][0]{
+    title,
+    images[] {
+      alt,
+      caption,
+      link,
+      asset->{ url }
+    }
+  }
+}`;
 
 export const revalidate = 0;
 
+// ✅ Type Definitions
 type SlugParams = { slug: string };
 
+type CarouselImage = {
+  alt?: string;
+  caption?: string;
+  link?: string;
+  asset?: { url?: string };
+};
+
+type CarouselBlock = {
+  title?: string;
+  images?: CarouselImage[];
+};
+
+// ✅ Main Page Component
 export default async function SlugPage({
   params: paramsPromise,
 }: {
@@ -21,14 +82,41 @@ export default async function SlugPage({
 }) {
   const { slug } = await paramsPromise;
 
-  const post: PostContentType | null = await client.fetch<PostContentType>(POST_QUERY, { slug });
-  if (post) return <PostContent content={post} />;
+  // 📰 Try to fetch Post + Global Carousel
+  const postData: {
+    post: PostContentType | null;
+    carouselBlock: CarouselBlock | null;
+  } = await client.fetch(POST_QUERY, { slug });
 
-  const service: ServiceContentType | null = await client.fetch<ServiceContentType>(SERVICE_QUERY, { slug });
-  if (service) return <ServiceContent content={service} />;
+  if (postData?.post) {
+    return (
+      <PostContent
+        content={{
+          ...postData.post,
+          // ✅ Convert null → undefined to match component types
+          carouselBlock: postData.carouselBlock ?? undefined,
+        }}
+      />
+    );
+  }
 
-  // const news: NewsContentType | null = await client.fetch<NewsContentType>(NEWS_QUERY, { slug });
-  // if (news) return <NewsContent content={news} />;
+  // 🧩 Fetch Service + Global Carousel
+  const serviceData: {
+    service: ServiceContentType | null;
+    carouselBlock: CarouselBlock | null;
+  } = await client.fetch(SERVICE_QUERY, { slug });
 
+  if (serviceData?.service) {
+    return (
+      <ServiceContent
+        content={{
+          ...serviceData.service,
+          carouselBlock: serviceData.carouselBlock ?? undefined, // ✅ Fixed
+        }}
+      />
+    );
+  }
+
+  // 🚫 Not Found
   notFound();
 }

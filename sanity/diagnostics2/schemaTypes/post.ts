@@ -63,6 +63,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: "carouselBlock",
+      title: "Carousel Block",
+      type: "reference",
+      to: [{ type: "carouselBlock" }],
+      description: "Select a carousel block to display image slides for this service.",
+    }),
+    defineField({
       name: 'customTable',
       title: 'Custom Table',
       type: 'object',

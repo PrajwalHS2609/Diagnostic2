@@ -1,4 +1,3 @@
-// ./schemas/faq.js
 export default {
   name: 'faq',
   title: 'FAQ',

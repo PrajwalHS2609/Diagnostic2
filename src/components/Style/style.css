@@ -256,6 +256,41 @@
   }
 }
 
+blockquote {
+  font-weight: bold;
+}
+blockquote > strong {
+  color: var(--customColor);
+}
+blockquote > em {
+  color: var(--customColor);
+}
+.portableImg {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.portableImg > a {
+  width: 100%;
+  height: 100%;
+}
+.portableImg > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* border: solid blue; */
+}
+
+@media screen and (max-width: 768px) {
+  .portableImg > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* border: solid blue; */
+  }
+}
+
 /* ---------------------------------------------------Accordion component------------------------------------------------------ */
 
 .custom-accordion {
@@ -466,4 +501,21 @@ details[open] .faq-answer {
   .faq-question {
     font-size: 1rem;
   }
+}
+.carouselItem {
+  width: 100%;
+}
+.carouselItem > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carouselContainer > .carousel-indicators {
+  display: none;
+}
+.carousel-control-next {
+  display: none;
+}
+.carousel-control-prev {
+  display: none;
 }

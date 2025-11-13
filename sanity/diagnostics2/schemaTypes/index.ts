@@ -5,8 +5,10 @@ import blogCategory from './blogCategory'
 import faqContent from './faqContent'
 import table from './table'
 import accordionBlock from './accordionBlock'
+import carouselBlock from './carouselBlock'
+import blogAdBlock from './blogAdBlock'
 
 
 
-export const schemaTypes = [post, blockContent,serviceContent,blogCategory,faqContent,table,accordionBlock]
+export const schemaTypes = [post, blockContent,serviceContent,blogCategory,faqContent,table,accordionBlock,carouselBlock,blogAdBlock]
     
