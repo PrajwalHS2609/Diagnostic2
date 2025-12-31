@@ -147,6 +147,9 @@
 .diagnosticsHead-container > p > strong {
   color: var(--customColor1);
 }
+.diagnosticsHead-container > ul{
+  width: 100%;
+}
 .diagnosticsHead-container > ul > li > strong {
   color: var(--customColor1);
 }

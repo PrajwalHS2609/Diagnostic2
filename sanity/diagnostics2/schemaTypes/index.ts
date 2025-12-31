@@ -8,7 +8,15 @@ import accordionBlock from './accordionBlock'
 import carouselBlock from './carouselBlock'
 import blogAdBlock from './blogAdBlock'
 
-
-
-export const schemaTypes = [post, blockContent,serviceContent,blogCategory,faqContent,table,accordionBlock,carouselBlock,blogAdBlock]
-    
+export const schemaTypes = [
+  post,
+  blockContent,
+  serviceContent,
+  blogCategory,
+  faqContent,
+  table,
+  accordionBlock,
+  carouselBlock,
+  blogAdBlock,
+  carouselBlock,
+]

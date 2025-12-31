@@ -32,7 +32,7 @@ export default function Home() {
       <HomeDoctor />
       <HomeTestimonial />
       <HomeSubServices />
-      <FaqComponent/>
+      {/* <FaqComponent/> */}
       <HomeContentFooter />
     </div>
   );
