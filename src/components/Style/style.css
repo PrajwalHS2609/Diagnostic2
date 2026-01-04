@@ -403,7 +403,8 @@ blockquote > em {
   background: var(--customColor3);
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 60%;
+  width: 10
+  0%;
 }
 
 .faq-title {
@@ -439,6 +440,8 @@ blockquote > em {
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   overflow: hidden;
+    margin-top: 10px;
+
 }
 
 .faq-item:hover {
