@@ -282,9 +282,14 @@ blockquote > em {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* border: solid blue; */
+  /* border: solid red; */
 }
-
+.portableImg  > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* border: solid red; */
+}
 @media screen and (max-width: 768px) {
   .portableImg > a > img {
     width: 100%;
