@@ -9,7 +9,6 @@ import HomeSubServices from "@/components/HomePage/HomeBlog/HomeBlog";
 import HomeTestimonial from "@/components/HomePage/HomeTestimonial/HomeTestimonial";
 import HomeContentHead from "@/components/HomePage/HomeContentHead";
 import HomeContentFooter from "@/components/HomePage/HomeContentFooter";
-import FaqComponent from "@/components/FaqComponent/FaqComponent";
 export const metadata = {
   title: "Diagnostics Services in Bangalore | Best Diagnostics Near Me",
   description:
