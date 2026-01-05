@@ -24,6 +24,9 @@
     "styled-components": "^6.1.18",
     "swiper": "^11.2.2"
   },
+    "overrides": {
+    "next": "15.1.6"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
