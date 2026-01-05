@@ -13,7 +13,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.88.1",
     "bootstrap": "^5.3.3",
-    "next": "15.5.2",
+    "next": "^15.5.7",
     "next-sanity": "^9.12.3",
     "react": "^19.2.3",
     "react-bootstrap": "^2.10.9",
