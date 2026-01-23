@@ -108,7 +108,7 @@
   box-shadow: 0 0 10px grey;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -147,7 +147,7 @@
 .diagnosticsHead-container > p > strong {
   color: var(--customColor1);
 }
-.diagnosticsHead-container > ul{
+.diagnosticsHead-container > ul {
   width: 100%;
 }
 .diagnosticsHead-container > ul > li > strong {
@@ -284,7 +284,7 @@ blockquote > em {
   object-fit: contain;
   /* border: solid red; */
 }
-.portableImg  > img {
+.portableImg > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -403,8 +403,7 @@ blockquote > em {
   background: var(--customColor3);
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 10
-  0%;
+  width: 10 0%;
 }
 
 .faq-title {
@@ -440,8 +439,7 @@ blockquote > em {
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   overflow: hidden;
-    margin-top: 10px;
-
+  margin-top: 10px;
 }
 
 .faq-item:hover {
@@ -521,7 +519,7 @@ details[open] .faq-answer {
   height: 100%;
   object-fit: cover;
 }
- .carousel-indicators {
+.carousel-indicators {
   display: none;
 }
 .carousel-control-next {
@@ -529,4 +527,150 @@ details[open] .faq-answer {
 }
 .carousel-control-prev {
   display: none;
+}
+/* ---------------------------SeoKeyword---------------------------------- */
+.keywords-container {
+  /* border: solid red; */
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 16px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.keywords-title {
+  font-size: 40px;
+  text-align: center;
+  color: var(--customColor1);
+}
+/* .keywords-title > span {
+  color: var(--customColor1);
+} */
+
+/* 💥 Multi-column layout */
+.keywords-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: calc(100% * 35px); /* 30 rows * approx 22px height each */
+  column-count: 4; /* auto split in 2 columns */
+  column-gap: 30px;
+}
+
+.keywords-item {
+  /* border: solid green; */
+  background: #f5f7fb;
+  padding: 8px 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  font-size: 17px;
+  border-left: 4px solid var(--customColor2);
+  break-inside: avoid; /* prevents items from breaking between columns */
+  transition: 0.25s ease;
+  width: 15 0px;
+}
+
+.keywords-item:hover {
+  background: #e8f0ff;
+  transform: translateX(3px);
+}
+@media screen and (max-width: 768px) {
+  .keywords-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    column-count: 1; /* auto split in 2 columns */
+    column-gap: 30px;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+  .keywords-title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+  .keywords-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: fit-content; /* 30 rows * approx 22px height each */
+    column-count: 3; /* auto split in 2 columns */
+    column-gap: 30px;
+    padding: 10px;
+    width: 100%;
+  }
+  .keywords-title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+  .keywords-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: fit-content; /* 30 rows * approx 22px height each */
+    column-count: 3; /* auto split in 2 columns */
+    column-gap: 30px;
+    padding: 10px;
+  }
+  .keywords-title {
+    font-size: 30px;
+  }
+}
+/* ---------------------------QuoteBlock----------------------------- */
+.quote-block {
+  border-left: 4px solid var(--customColor1);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  background: var(--customColor3);
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--customColor1);
+}
+
+.quote-author {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: right;
+  color: #666;
+  font-weight: bold;
+}
+.quote-text > span {
+  font-size: 30px;
+}
+
+/* ----------------------------------Highlight----------------------------------- */
+
+.highlight-box {
+  background: var(--customLightColor);
+  border: 4px dotted var(--customColor1);
+  margin: 20px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 15px;
+}
+.highlight-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.highlight-content > p {
+  font-size: 16px;
 }

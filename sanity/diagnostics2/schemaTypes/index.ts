@@ -7,6 +7,9 @@ import table from './table'
 import accordionBlock from './accordionBlock'
 import carouselBlock from './carouselBlock'
 import blogAdBlock from './blogAdBlock'
+import seoKeywordsBlock from './seoKeywordsBlock'
+import highlightBlock from './highlightBlock'
+import quoteContent from './quoteContent'
 
 export const schemaTypes = [
   post,
@@ -18,5 +21,7 @@ export const schemaTypes = [
   accordionBlock,
   carouselBlock,
   blogAdBlock,
-  carouselBlock,
+  seoKeywordsBlock,
+  highlightBlock,
+  quoteContent
 ]

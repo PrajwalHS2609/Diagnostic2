@@ -14,6 +14,10 @@ function urlFor(source: SanityImageSource) {
 interface CustomTableRow {
   cells: string[];
 }
+interface QuoteBlockValue {
+  text: string;
+  author?: string;
+}
 interface CustomTableValue {
   title?: string;
   headers: string[];
@@ -32,7 +36,15 @@ interface FAQBlockValue {
   title?: string;
   items: FAQItem[];
 }
-
+export interface ContentHighlight {
+  title: string;
+  description?: string;
+}
+interface SeoKeywordsBlockValue {
+  _type: "seoKeywordsBlock";
+  _key?: string;
+  keywords: string[];
+}
 export const portableTextComponents: PortableTextComponents = {
   types: {
     // 🖼️ Image Renderer
@@ -133,6 +145,48 @@ export const portableTextComponents: PortableTextComponents = {
               </details>
             ))}
           </div>
+        </div>
+      );
+    },
+    // ----------------------------------HighlightBlock----------------------------------
+    highlightBlock: ({ value }) => {
+      return (
+        <div className="highlight-box">
+          {value.title && <h5 className="highlight-title">{value.title}</h5>}
+          <div className="highlight-content">
+            <PortableText
+              value={value.content}
+              components={portableTextComponents}
+            />
+          </div>
+        </div>
+      );
+    },
+    // --------------------------------------Quote------------------------------------
+    // 📝 Quote Block Renderer
+    quoteBlock: ({ value }: { value: QuoteBlockValue }) => {
+      if (!value?.text) return null;
+
+      return (
+        <blockquote className="quote-block">
+          <p className="quote-text"> {value.text} </p>
+          {value.author && (
+            <cite className="quote-author">— {value.author}</cite>
+          )}
+        </blockquote>
+      );
+    },
+    // ----------------------------------SeoKeyword-----------------------------------------
+    seoKeywordsBlock: ({ value }: { value: SeoKeywordsBlockValue }) => {
+      if (!value?.keywords?.length) return null;
+
+      return (
+        <div className="keywords-container">
+          <ul className="keywords-list">
+            {value.keywords.map((keyword: string, index: number) => (
+              <li className="keywords-item" key={index}>{keyword}</li>
+            ))}
+          </ul>
         </div>
       );
     },
